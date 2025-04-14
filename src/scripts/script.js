@@ -64,11 +64,11 @@ const carregarTema = () => {
   if (localStorage.getItem("tema") === "escuro") {
     document.body.classList.add("dark-theme");
     document.getElementById("theme-toggle").textContent =
-      "Alternar para Tema Claro";
+      "Alter to White Mode";
   } else {
     document.body.classList.remove("dark-theme");
     document.getElementById("theme-toggle").textContent =
-      "Alternar para Tema Escuro";
+      "Alter to Dark Mode";
   }
 };
 
@@ -83,10 +83,10 @@ themeToggleBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark-theme");
 
   if (document.body.classList.contains("dark-theme")) {
-    themeToggleBtn.textContent = "Alternar para Tema Claro";
+    themeToggleBtn.textContent = "Alter to White Mode";
     localStorage.setItem("tema", "escuro");
   } else {
-    themeToggleBtn.textContent = "Alternar para Tema Escuro";
+    themeToggleBtn.textContent = "Alter to Dark Mode";
     localStorage.removeItem("tema");
   }
 });
