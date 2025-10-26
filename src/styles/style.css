@@ -1,21 +1,21 @@
 /* Tema padrão (claro) */
 :root {
-  --primary-color: #3f51b5; /* Azul suave, cor principal */
-  --secondary-color: #f9f9fc; /* Fundo cinza muito claro */
-  --text-color: #4a4a4a; /* Cinza escuro, mais suave para leitura */
+  --primary-color: #3f51b5; 
+  --secondary-color: #f9f9fc; 
+  --text-color: #4a4a4a; 
   --text-light: #000000;
-  --border-color: #d1d5db; /* Cinza suave para bordas */
-  --shadow-color: rgba(0, 0, 0, 0.05); /* Sombra forte */
+  --border-color: #d1d5db; 
+  --shadow-color: rgba(0, 0, 0, 0.05);
 }
 
 /* Tema escuro */
 .dark-theme {
   --primary-color: #309292;
-  --secondary-color: #212b36; /* Fundo preto acinzentado */
-  --text-color: #e0e0e0; /* Texto claro mais suave */
-  --text-light: #ffffff; /* Branco para texto claro */
-  --border-color: #444b5a; /* Cinza suave para bordas */
-  --shadow-color: rgba(0, 0, 0, 0.25); /* Sombra mais intensa */
+  --secondary-color: #212b36; 
+  --text-color: #e0e0e0; 
+  --text-light: #ffffff; 
+  --border-color: #444b5a; 
+  --shadow-color: rgba(0, 0, 0, 0.25); 
 }
 
 /* Botão de alternância */
