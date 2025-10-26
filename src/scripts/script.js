@@ -10,7 +10,7 @@ const certificados = [
   { nome: "Desenvolvimento de APIS em Python com Flask", instituicao: "DIO", ano: 2024 },
   // **Desenvolvimento Web e Mobile**
   { nome: "Curso crie um site completo com HTML, CSS e JavaScript", instituicao: "Udemy", ano: 2024, url: "src/pdfs/Richard Esley Silva Oliveira - Curso Crie um site completo HTML, CSS e JS.pdf" },
-  { nome: "Curso crie Site Profissional e Loja Virtual WordPress", instituicao: "Udemy", ano: 2025, url: "src\pdfs\Richard Esley Silva Oliveira - Site Profissional e Loja Virtual WordPress.pdf" },
+  { nome: "Curso crie Site Profissional e Loja Virtual WordPress", instituicao: "Udemy", ano: 2025, url: "src/pdfs/Richard Esley Silva Oliveira - Site Profissional e Loja Virtual WordPress.pdf" },
   { nome: "Curso de Desenvolvimento Android Completo 2024 - Kotlin & Java", instituicao: "Udemy", ano: 2024, url: "src/pdfs/Richard Esley Silva Oliveira - Curso Desenvolvimento Android Completo 2024 - Kotlin e Java.pdf" },
   { nome: "Curso de HTML e CSS - Desenvolvimento", instituicao: "Alura", ano: 2023, url: "src/pdfs/Richard Esley Silva Oliveira - Curso HTML e CSS_ ambientes de desenvolvimento, estrutura de arquivos e tags - Alura.pdf" },
   { nome: "Desenvolva um Jogo e Pratique lógica de Programação", instituicao: "Alura", ano: 2024, url: "src/pdfs/Richard Esley Silva Oliveira - Curso JavaScript e HTML_ desenvolva um jogo e pratique lógica de programação - Alura.pdf" },
