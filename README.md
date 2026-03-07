@@ -47,8 +47,6 @@ Portfólio profissional desenvolvido para apresentar minha trajetória, projetos
 
 **Richard Esley**
 
-* **Site Oficial:** [richardesley.dev](https://richardesley.dev)
-* **Portfólio de Certificados:** https://certificates-richard-oliveira.vercel.app
 * **GitHub:** https://github.com/RDEsley
 * **LinkedIn:** [richardesley](https://www.linkedin.com/in/richardesley/)
 
