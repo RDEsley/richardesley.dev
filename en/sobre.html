@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Story | Richard Oliveira</title>
+  <meta name="description" content="Richard Oliveira's journey: from curiosity about technology to Full Stack Developer. Violin, CEUB, ETB, web platform for pest control.">
+  <link rel="stylesheet" href="../src/styles/main.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="../src/images/favicon-16x16.png">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__brand">Richard Oliveira</a>
+      <button class="navbar__hamburger" aria-label="Open menu" type="button">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="navbar__nav">
+        <ul class="navbar__links">
+          <li><a href="index.html#home" class="navbar__link">Home</a></li>
+          <li><a href="index.html#sobre" class="navbar__link">About</a></li>
+          <li><a href="index.html#projetos" class="navbar__link">Projects</a></li>
+          <li><a href="index.html#certificados" class="navbar__link">Certificates</a></li>
+          <li><a href="index.html#contato" class="navbar__link">Contact</a></li>
+        </ul>
+        <div class="navbar__actions">
+          <button id="theme-toggle" class="navbar__theme-btn" aria-label="Toggle theme" type="button">&#9728;</button>
+          <a href="../sobre.html" class="navbar__lang" hreflang="pt-br">PT</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="story-page">
+    <div class="container">
+      <a href="index.html#sobre" class="story-page__back">← Back to portfolio</a>
+      <header class="story-page__header">
+        <h1>My Story</h1>
+        <p class="story-page__intro">From curiosity about technology to Full Stack Developer — a journey guided by dedication and the motivation.</p>
+      </header>
+
+      <article class="story-page__content">
+        <p>Technology has been present in my life since I was young. I spent much of my childhood exploring online games and digital environments. Of course, I also had the typical experiences of any child — playing outside, ball games, toy cars — but there was always a constant curiosity about the screens and devices around me.</p>
+
+        <p>Over time, that curiosity began to turn into questions: how does a touch on the screen generate a response? How does a phone perform so many different tasks? What happens behind an app or a website? That desire to understand how everything worked is what brought me closer to technology in a deeper way.</p>
+
+        <p>I've always found it easy to dedicate myself intensely to things that sparked my interest. At 12 I started studying the violin, an instrument in which I graduated and worked professionally. Over time I also learned viola, keyboard, harmonica, ukulele, and flute, developing a strong interest in music.</p>
+
+        <p>At 16 I completed the English course at CILB. The following year, I enrolled in the Bachelor's in Computer Science at CEUB and started, in parallel, the Technical in Informatics program at Escola Técnica de Brazlândia. I completed the technical course in July 2023, an extremely important stage in my education.</p>
+
+        <p>During the technical course I had the opportunity to participate in the development of a complete project: a web platform focused on the pest control sector. The system aimed both to promote pest control services and to guide users with educational information on domestic pest prevention.</p>
+
+        <p>The platform included user authentication, registration and login system, account management, and an administrative panel with CRUD functionality for data administration. We also developed a responsive interface to ensure a good user experience across different devices.</p>
+
+        <p>In this project I played an active role in organizing the team's tasks, planning development stages, and providing technical support to colleagues during the system's construction. The experience was extremely enriching, as it involved everything from the conception of the idea to the implementation of the platform's main functionalities.</p>
+
+        <p>In addition to technical learning in HTML, CSS, JavaScript, Python, and PHP, the project also brought practical experience with team organization, problem-solving, and real-world system development.</p>
+
+        <p>I am currently continuing my education in the Bachelor's in Computer Science at UniCEUB, strengthening my foundation in software development and system architecture. In parallel, I had professional experience as an administrative assistant, where I worked with process organization, reports, and information management — skills that today contribute to a more structured view in project development.</p>
+
+        <p>Throughout this journey I developed various practical projects that are published on my GitHub (<a href="https://github.com/RDEsley" target="_blank" rel="noopener">github.com/RDEsley</a>), totaling <strong>over 40 repositories</strong> involving different technologies. Among them are applications using React, Python, MongoDB, PHP, and SQL.</p>
+
+        <p>I also developed my own site to organize and present my certifications and formations throughout the journey: <a href="https://richardesley-dev.vercel.app/" target="_blank" rel="noopener">richardesley-dev.vercel.app</a>.</p>
+
+        <p>Today I work as a Full Stack developer, always seeking to evolve technically and build increasingly complete solutions. My journey has always been guided by curiosity to understand how technology works and by the motivation to turn ideas into functional systems.</p>
+
+        <p>I continue learning, developing new projects, and improving my skills, with the goal of contributing increasingly to challenging projects and in environments that value growth and innovation.</p>
+
+        <div class="story-page__contact">
+          <p><strong>Contact:</strong> <a href="mailto:richardesleyso@gmail.com">richardesleyso@gmail.com</a> · +55 (61) 99881-8808 · <a href="https://linkedin.com/in/richardesley" target="_blank" rel="noopener">LinkedIn</a></p>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a href="index.html" class="footer__link">← Back to portfolio</a>
+      <p class="footer__credits">Made by <strong>Richard Oliveira</strong> · <span id="current-year">2025</span></p>
+    </div>
+  </footer>
+
+  <script src="../src/scripts/theme.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      carregarTema();
+      document.getElementById("theme-toggle")?.addEventListener("click", alternarTema);
+      document.getElementById("current-year").textContent = new Date().getFullYear();
+      const h = document.querySelector(".navbar__hamburger");
+      const n = document.querySelector(".navbar__nav");
+      if (h && n) {
+        h.addEventListener("click", () => { h.classList.toggle("is-active"); n.classList.toggle("is-open"); });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 # Portfólio Full Stack - Richard Oliveira
 
-Portfólio profissional como Desenvolvedor Full Stack e Analista de Dados. Design minimalista, mobile-first, com suporte a tema claro/escuro e versões em PT-BR e EN.
+Portfólio profissional como Desenvolvedor Full Stack e UI/UX Focus. Design minimalista, mobile-first, com suporte a tema claro/escuro e versões em PT-BR e EN.
 
 **Live:** [richardesley.dev](https://richardesley.dev)
 
