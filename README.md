@@ -4,7 +4,7 @@
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-Portfólio profissional desenvolvido para apresentar minha trajetória, projetos e habilidades como Desenvolvedor Full Stack e Analista de Dados. O projeto foca em alta performance, acessibilidade e uma experiência de usuário fluida.
+Portfólio profissional desenvolvido para apresentar minha trajetória, projetos e habilidades como Desenvolvedor Full Stack e UX/UI. O projeto foca em alta performance, acessibilidade e uma experiência de usuário fluida.
 
 🌍 **Live:** [richardesley.dev](https://richardesley-dev.vercel.app/)
 
