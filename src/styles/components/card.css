@@ -1,0 +1,108 @@
+/**
+ * card.css - Componente Card reutilizável
+ * Usado em Projetos, Certificados e GitHub
+ */
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: var(--space-4);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent);
+}
+
+/* Card com imagem (projetos) */
+.card--project {
+  overflow: hidden;
+}
+
+.card__image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: var(--space-3);
+}
+
+.card__title {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-2);
+  color: var(--text-primary);
+}
+
+.card__description {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: var(--space-3);
+  flex-grow: 1;
+}
+
+/* Badges de tech stack */
+.card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin-bottom: var(--space-3);
+}
+
+.card__tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  background: var(--accent-light);
+  color: var(--accent);
+  border-radius: 20px;
+}
+
+/* Links do card */
+.card__links {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: auto;
+}
+
+.card__link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.card__link:hover {
+  color: var(--accent-hover);
+  transform: translateX(4px);
+}
+
+/* Card de certificado */
+.card--certificate {
+  cursor: pointer;
+}
+
+.card--certificate .card__link,
+.card--certificate a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.card--certificate h3 {
+  font-size: 1rem;
+  margin-bottom: var(--space-1);
+}
+
+.card--certificate p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}

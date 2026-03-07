@@ -1,58 +1,34 @@
+# Portfólio Full Stack - Richard Oliveira
 
-# Página de Certificados - Modo Claro e Escuro
+Portfólio profissional como Desenvolvedor Full Stack e Analista de Dados. Design minimalista, mobile-first, com suporte a tema claro/escuro e versões em PT-BR e EN.
 
-Bem-vindo ao meu repositório onde você pode visualizar meus certificados e alternar entre os modos claro e escuro. Este projeto é ideal para apresentar informações profissionais com um design moderno e responsivo.
-
-Clique aqui para testar --> https://certificates-richard-oliveira.vercel.app
----
-
-## 🚀 Recursos do Projeto
-
-- **Alternância de tema**: Modo claro e escuro para melhor experiência visual.
-- **Design Responsivo**: Compatível com dispositivos móveis, tablets e desktops.
-- **Seção de Contato**: Facilita a comunicação com links clicáveis.
-- **Animações**: Movimentos suaves para aprimorar a experiência do usuário.
+**Live:** [richardesley.dev](https://richardesley.dev)
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Estrutura do Projeto
 
-- **HTML5**: Estrutura da página.
-- **CSS3**: Estilização com uso de variáveis e animações.
-- **JavaScript (ES6)**: Controle de interatividade, como o alternador de temas.
-
----
-
-## 🌟 Funcionalidades
-
-1. **Modo Claro e Escuro**:
-   - Altere entre os modos através de um botão.
-   - O tema é salvo localmente utilizando o **Local Storage**, garantindo a persistência ao recarregar a página.
-
-2. **Currículos Visuais**:
-   - Exibição de currículos em seções bem organizadas.
-   - Links para download ou acesso rápido.
-
-3. **Seção de Contato**:
-   - Inclui informações de contato com animações interativas.
-   - Links para redes sociais e e-mail.
+```
+├── index.html           # Página principal (PT-BR)
+├── en/index.html        # Versão em inglês
+├── assets/images/       # Fotos (hero, sobre)
+├── src/
+│   ├── styles/          # CSS modular
+│   │   ├── base.css     # Reset, variáveis, tipografia
+│   │   ├── theme.css    # Tema claro/escuro
+│   │   ├── components/  # Navbar, Hero, Card, Button, Footer
+│   │   ├── sections.css # Sobre, Projetos, Certificados, etc.
+│   │   └── main.css     # Orquestrador
+│   ├── scripts/         # theme, certificados, main
+│   ├── data/            # certificados.js, projetos.js
+│   ├── pdfs/            # PDFs dos certificados
+│   └── files/           # cv.pdf
+```
 
 ---
 
-## 📦 Como Usar
+## Tecnologias
 
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   ```
-2. Abra o arquivo `index.html` no navegador:
-   ```bash
-   open index.html
-   ```
-   
----
-
-## 📝 Melhorias Futuras
-
-- Adicionar suporte multilíngue.
-- Implementar uma API para currículos dinâmicos.
+- HTML5, CSS3, JavaScript (vanilla)
+- Formspree (formulário de contato)
+- GitHub Readme Stats (estatísticas do perfil)

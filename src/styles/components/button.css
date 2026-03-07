@@ -1,0 +1,66 @@
+/**
+ * button.css - Componente Button reutilizável
+ * Variantes: primary, secondary, outline
+ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-4);
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.3);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Variante primária */
+.btn--primary {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.btn--primary:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Variante secundária / outline */
+.btn--secondary {
+  background: transparent;
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.btn--secondary:hover {
+  background: var(--accent-light);
+  transform: translateY(-2px);
+}
+
+/* Variante ghost */
+.btn--ghost {
+  background: transparent;
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+.btn--ghost:hover {
+  background: var(--accent-light);
+  border-color: var(--accent);
+}

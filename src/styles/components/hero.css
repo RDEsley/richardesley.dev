@@ -1,0 +1,124 @@
+/**
+ * hero.css - Seção Hero / Home
+ * Catchphrase, foto e CTAs
+ */
+
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding-top: 80px; /* Offset navbar fixa */
+  padding-bottom: var(--space-6);
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-2);
+}
+
+/* Conteúdo textual */
+.hero__content {
+  order: 1;
+}
+
+.hero__greeting {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-2);
+}
+
+.hero__title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: var(--space-3);
+  color: var(--text-primary);
+}
+
+.hero__catchphrase {
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--space-4);
+  max-width: 540px;
+}
+
+/* CTAs */
+.hero__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.hero__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-4);
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero__cta--primary {
+  background: var(--accent);
+  color: white;
+  border: 2px solid var(--accent);
+}
+
+.hero__cta--primary:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.hero__cta--secondary {
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+}
+
+.hero__cta--secondary:hover {
+  background: var(--accent-light);
+  transform: translateY(-2px);
+}
+
+/* Imagem */
+.hero__image-wrapper {
+  order: 0;
+  position: relative;
+}
+
+.hero__image {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.hero__image img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+}
+
+/* Desktop: foto à direita */
+@media (min-width: 768px) {
+  .hero__inner {
+    grid-template-columns: 1fr 400px;
+    gap: var(--space-8);
+  }
+
+  .hero__image-wrapper {
+    order: 2;
+  }
+}
