@@ -1,14 +1,32 @@
-# Portfólio Full Stack - Richard Oliveira
+# 🌐 Portfólio Full Stack
 
-Portfólio profissional como Desenvolvedor Full Stack e UI/UX Focus. Design minimalista, mobile-first, com suporte a tema claro/escuro e versões em PT-BR e EN.
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-**Live:** [richardesley.dev](https://richardesley.dev)
+Portfólio profissional desenvolvido para apresentar minha trajetória, projetos e habilidades como Desenvolvedor Full Stack e Analista de Dados. O projeto foca em alta performance, acessibilidade e uma experiência de usuário fluida.
+
+🌍 **Live:** [richardesley.dev](https://richardesley-dev.vercel.app/)
 
 ---
 
-## Estrutura do Projeto
+## ✨ Recursos
 
-```
+* **Design Responsivo:** Abordagem *mobile-first*, garantindo adaptação perfeita em qualquer dispositivo.
+* **Personalização de Tema:** Suporte nativo para alternância entre temas Claro e Escuro (Dark/Light mode).
+* **Internacionalização (i18n):** Versões completas do conteúdo em Português (PT-BR) e Inglês (EN).
+* **Contato Direto:** Formulário de contato funcional e integrado via Formspree.
+* **Métricas em Tempo Real:** Exibição de estatísticas do perfil integradas com GitHub Readme Stats.
+
+## 🛠️ Tecnologias Utilizadas
+
+* **Front-End:** HTML5, CSS3 e JavaScript (Vanilla).
+* **Arquitetura CSS:** Estrutura baseada em componentes, variáveis e arquivos modulares para escalabilidade e fácil manutenção.
+* **Integrações:** Formspree e GitHub Readme Stats.
+
+## 📂 Estrutura do Projeto
+
+```text
 ├── index.html           # Página principal (PT-BR)
 ├── en/index.html        # Versão em inglês
 ├── assets/images/       # Fotos (hero, sobre)
@@ -25,10 +43,14 @@ Portfólio profissional como Desenvolvedor Full Stack e UI/UX Focus. Design mini
 │   └── files/           # cv.pdf
 ```
 
+## 👨‍💻 Desenvolvedor
+
+**Richard Esley**
+
+* **Site Oficial:** [richardesley.dev](https://richardesley.dev)
+* **Portfólio de Certificados:** https://certificates-richard-oliveira.vercel.app
+* **GitHub:** https://github.com/RDEsley
+* **LinkedIn:** [richardesley](https://www.linkedin.com/in/richardesley/)
+
 ---
-
-## Tecnologias
-
-- HTML5, CSS3, JavaScript (vanilla)
-- Formspree (formulário de contato)
-- GitHub Readme Stats (estatísticas do perfil)
+Este projeto está sob a licença MIT.
