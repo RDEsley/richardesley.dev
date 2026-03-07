@@ -1,0 +1,184 @@
+/**
+ * navbar.css - Componente Navbar fixa
+ * Links de navegação, theme toggle e seletor de idioma
+ */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--navbar-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--navbar-border);
+  padding: var(--space-2) var(--space-4);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.navbar__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+/* Logo / Nome */
+.navbar__brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--navbar-text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.navbar__brand:hover {
+  color: var(--accent);
+}
+
+/* Menu de navegação */
+.navbar__nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  list-style: none;
+}
+
+.navbar__link {
+  color: var(--navbar-text);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: var(--space-1) var(--space-2);
+  border-radius: 6px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.navbar__link:hover {
+  color: var(--accent);
+  background: var(--accent-light);
+}
+
+/* Botões de ação (theme, idioma) */
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* Botão theme toggle */
+.navbar__theme-btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.navbar__theme-btn:hover {
+  background: var(--accent-light);
+  border-color: var(--accent);
+  transform: scale(1.05);
+}
+
+/* Link idioma */
+.navbar__lang {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+  padding: var(--space-1) var(--space-2);
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navbar__lang:hover {
+  background: var(--accent-light);
+  color: var(--accent-hover);
+}
+
+/* Hamburger menu (mobile) */
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-1);
+}
+
+.navbar__hamburger span {
+  width: 24px;
+  height: 2px;
+  background: var(--navbar-text);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.navbar__hamburger.is-active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar__hamburger.is-active span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar__hamburger.is-active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile: menu colapsável */
+@media (max-width: 768px) {
+  .navbar__hamburger {
+    display: flex;
+  }
+
+  .navbar__nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--navbar-bg);
+    border-bottom: 1px solid var(--navbar-border);
+    flex-direction: column;
+    padding: var(--space-3);
+    gap: var(--space-2);
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .navbar__nav.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .navbar__links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar__link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: var(--space-2);
+  }
+}

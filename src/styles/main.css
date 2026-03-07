@@ -1,0 +1,15 @@
+/**
+ * main.css - Orquestrador de estilos
+ * Importa todos os módulos CSS do portfólio
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap");
+
+@import "base.css";
+@import "theme.css";
+@import "components/navbar.css";
+@import "components/hero.css";
+@import "components/card.css";
+@import "components/button.css";
+@import "components/footer.css";
+@import "sections.css";

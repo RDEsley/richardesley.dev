@@ -1,0 +1,238 @@
+/**
+ * sections.css - Estilos das seções específicas
+ * Sobre, Projetos, Certificados, GitHub, Contato
+ */
+
+/* ========== SOBRE ========== */
+.about__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about__text {
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.about__text p {
+  margin-bottom: var(--space-3);
+}
+
+.about__text strong {
+  color: var(--text-primary);
+}
+
+.about__images {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+@media (min-width: 480px) {
+  .about__images {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.about__image {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.about__image img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .about__inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ========== PROJETOS ========== */
+.projects__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ========== CERTIFICADOS ========== */
+.certificates__header {
+  text-align: center;
+  margin-bottom: var(--space-4);
+}
+
+.certificates__header h2 {
+  margin-bottom: var(--space-2);
+}
+
+.certificates__counters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.certificates__counters span {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.certificates__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+@media (min-width: 640px) {
+  .certificates__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .certificates__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ========== GITHUB ========== */
+.github__card {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-6);
+}
+
+.github__stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+.github__stats img {
+  border-radius: 8px;
+  max-width: 100%;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .github__stats img {
+    width: auto;
+    max-width: 100%;
+  }
+}
+
+/* ========== CONTATO ========== */
+.contact__inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.contact__form label {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: -4px;
+}
+
+.contact__form input,
+.contact__form textarea {
+  padding: var(--space-2);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  transition: border-color 0.2s ease;
+}
+
+.contact__form input:focus,
+.contact__form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.15);
+}
+
+.contact__form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact__success {
+  padding: var(--space-3);
+  background: var(--accent-light);
+  color: var(--accent-hover);
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  display: none;
+}
+
+.contact__success.is-visible {
+  display: block;
+}
+
+.contact__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.contact__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-primary);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.contact__link:hover {
+  border-color: var(--accent);
+  transform: translateX(4px);
+}
+
+.contact__link.copied::after {
+  content: attr(data-copied);
+  margin-left: auto;
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 600;
+}

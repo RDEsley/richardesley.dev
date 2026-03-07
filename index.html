@@ -3,39 +3,180 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Certificates - Richard Oliveira</title>
-  <link rel="stylesheet" href="/src/styles/style.css">
-  <link rel="icon" type="image/png" sizes="16x16"  href="/src/images/favicon-16x16.png">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="theme-color" content="#ffffff">
+  <title>Richard Oliveira | Desenvolvedor Full Stack & Analista de Dados</title>
+  <meta name="description" content="Portfólio de Richard Oliveira - Desenvolvedor Full Stack e Analista de Dados. Formado pelo CEUB, líder técnico na ETB, fundador da Fate Eight Tech.">
+  <meta name="keywords" content="Richard Oliveira, Full Stack Developer, Analista de Dados, Desenvolvedor, CEUB, Python, React, JavaScript">
+  <meta property="og:title" content="Richard Oliveira | Desenvolvedor Full Stack & Analista de Dados">
+  <meta property="og:description" content="Portfólio de Richard Oliveira - Desenvolvedor Full Stack e Analista de Dados. Formado pelo CEUB, líder técnico na ETB.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://richardesley.dev/">
+  <meta property="og:image" content="https://richardesley.dev/assets/images/richard-profissional.jpeg">
+  <link rel="stylesheet" href="src/styles/main.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="src/images/favicon-16x16.png">
+  <link rel="alternate" hreflang="pt-br" href="https://richardesley.dev/">
+  <link rel="alternate" hreflang="en" href="https://richardesley.dev/en/">
 </head>
 <body>
-  <header>
-    <h1>My Certificates</h1>
-    <p class="intro">Full Stack Developer and Computer Science student. Below are the courses and certifications that reflect part of my learning journey.</p>
-    <button id="theme-toggle">Alter Theme</button>
-  </header>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar__inner">
+      <a href="#home" class="navbar__brand">Richard Oliveira</a>
+
+      <button class="navbar__hamburger" aria-label="Abrir menu" type="button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="navbar__nav">
+        <ul class="navbar__links">
+          <li><a href="#home" class="navbar__link">Home</a></li>
+          <li><a href="#sobre" class="navbar__link">Sobre</a></li>
+          <li><a href="#projetos" class="navbar__link">Projetos</a></li>
+          <li><a href="#certificados" class="navbar__link">Certificados</a></li>
+          <li><a href="#github" class="navbar__link">GitHub</a></li>
+          <li><a href="#contato" class="navbar__link">Contato</a></li>
+        </ul>
+        <div class="navbar__actions">
+          <button id="theme-toggle" class="navbar__theme-btn" aria-label="Alternar tema" type="button">&#9728;</button>
+          <a href="en/" class="navbar__lang" hreflang="en">EN</a>
+        </div>
+      </div>
+    </div>
+  </nav>
 
   <main>
-    <section id="certificados">
-      <h2>Courses: <counter>14</counter> Formations: <counter>3</counter> Bootcamps: <counter>1</counter></h2>
-      <div class="certificados-list"></div>
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <div class="hero__inner">
+        <div class="hero__content">
+          <p class="hero__greeting">Olá, eu sou o Richard</p>
+          <h1 class="hero__title">Desenvolvedor Full Stack & Analista de Dados</h1>
+          <p class="hero__catchphrase">Transformando ideias em soluções digitais. Formação em Ciência da Computação, liderança técnica na ETB e paixão por código e dados.</p>
+          <div class="hero__ctas">
+            <a href="src/files/cv.pdf" class="hero__cta hero__cta--primary" download>Baixar CV</a>
+            <a href="https://github.com/RDEsley" target="_blank" rel="noopener noreferrer" class="hero__cta hero__cta--secondary">Ver GitHub</a>
+          </div>
+        </div>
+        <div class="hero__image-wrapper">
+          <div class="hero__image">
+            <img src="assets/images/richard-descontraido.jpeg" alt="Richard Oliveira - Desenvolvedor Full Stack">
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="contato">
-      <h2><span> Contact </span></h2></div>
-      <ul>
-        <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/richardesley" target="_blank">linkedin.com/in/richardesley</a></li>
-        <li><strong>GitHub:</strong> <a href="https://github.com/RDEsley" target="_blank">github.com/RDEsley</a></li>
-        <li><strong>Email:</strong> <a href="mailto:richardesleyso@gmail.com">richardesleyso@gmail.com</a></li>
-      </ul>
+    <!-- Sobre -->
+    <section id="sobre" class="about">
+      <div class="container">
+        <h2>Sobre</h2>
+        <div class="about__inner">
+          <div class="about__text">
+            <p>Formado em <strong>Ciência da Computação pelo CEUB</strong>, atuo como Desenvolvedor Full Stack e Analista de Dados. Minha trajetória combina <strong>liderança técnica na ETB</strong>, onde coordeno projetos de controle de pragas e sistemas de gestão, com uma forte vocação para ensino e inovação.</p>
+            <p>Como voluntário, atuo como <strong>professor de violino e viola</strong>, unindo minha paixão pela música à responsabilidade social. Sou fundador da <strong>Fate Eight Tech</strong>, iniciativa que materializa meu compromisso com soluções tecnológicas de impacto.</p>
+          </div>
+          <div class="about__images">
+            <div class="about__image">
+              <img src="assets/images/richard-profissional.jpeg" alt="Richard Oliveira - Foto profissional">
+            </div>
+            <div class="about__image">
+              <img src="assets/images/richard-violino.jpeg" alt="Richard Oliveira tocando violino">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projetos" class="projects">
+      <div class="container">
+        <h2>Projetos</h2>
+        <div class="projects__grid">
+          <!-- Projetos renderizados via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificados -->
+    <section id="certificados" class="certificates">
+      <div class="container">
+        <div class="certificates__header">
+          <h2>Certificados</h2>
+          <div class="certificates__counters"><!-- Preenchido via JS --></div>
+        </div>
+        <div class="certificates__grid">
+          <!-- Certificados renderizados via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- GitHub -->
+    <section id="github" class="github">
+      <div class="container">
+        <h2>GitHub</h2>
+        <a href="https://github.com/RDEsley" target="_blank" rel="noopener noreferrer" class="card github__card">
+          <h3>@RDEsley</h3>
+          <p>Confira meu perfil e contribuições no GitHub</p>
+          <div class="github__stats">
+            <img src="https://github-readme-stats.vercel.app/api?username=RDEsley&show_icons=true&theme=default&hide_border=true" alt="GitHub Stats - Richard Oliveira">
+            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=RDEsley&layout=compact&theme=default&hide_border=true" alt="Linguagens mais usadas">
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="contact">
+      <div class="container">
+        <h2>Contato</h2>
+        <div class="contact__inner">
+          <!-- Substitua YOUR_FORMSPREE_ID pelo ID do seu formulário em formspree.io -->
+          <form id="contact-form" class="contact__form" action="https://formspree.io/f/xkoqnkek" method="POST"> 
+            <input type="hidden" name="_subject" value="Contato Portfolio | richardesley.dev - Nova Mensagem">
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" required placeholder="Seu nome">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="seu@email.com">
+
+            <label for="message">Mensagem</label>
+            <textarea id="message" name="message" required placeholder="Sua mensagem"></textarea>
+
+            <button type="submit" class="btn btn--primary">Enviar</button>
+          </form>
+          <p class="contact__success">Mensagem enviada com sucesso! Obrigado.</p>
+
+          <div class="contact__links">
+            <a href="https://linkedin.com/in/richardesley" target="_blank" rel="noopener noreferrer" class="contact__link">LinkedIn</a>
+            <a href="mailto:richardesleyso@gmail.com" class="contact__link" data-copy-email="richardesleyso@gmail.com" data-copied="Copiado!">E-mail: richardesleyso@gmail.com</a>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2024 - Developed with love by Richard Oliveira.</p>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <ul class="footer__links">
+        <li><a href="#home" class="footer__link">Home</a></li>
+        <li><a href="#sobre" class="footer__link">Sobre</a></li>
+        <li><a href="#projetos" class="footer__link">Projetos</a></li>
+        <li><a href="#certificados" class="footer__link">Certificados</a></li>
+        <li><a href="#contato" class="footer__link">Contato</a></li>
+      </ul>
+      <div class="footer__social">
+        <a href="https://linkedin.com/in/richardesley" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="LinkedIn">in</a>
+        <a href="https://github.com/RDEsley" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="GitHub">GH</a>
+      </div>
+      <p class="footer__credits">Made by <strong>Richard Oliveira</strong> · <span id="current-year">2025</span></p>
+    </div>
   </footer>
 
-  <script src="/src/scripts/script.js"></script>
+  <script src="src/data/certificados.js"></script>
+  <script src="src/data/projetos.js"></script>
+  <script src="src/scripts/theme.js"></script>
+  <script src="src/scripts/certificados.js"></script>
+  <script src="src/scripts/main.js"></script>
 </body>
 </html>

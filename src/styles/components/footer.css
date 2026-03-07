@@ -1,0 +1,76 @@
+/**
+ * footer.css - Componente Footer
+ * Links rápidos, redes sociais e créditos
+ */
+
+.footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  padding: var(--space-6) var(--space-4);
+  margin-top: var(--space-8);
+}
+
+.footer__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  text-align: center;
+}
+
+/* Links rápidos */
+.footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+  list-style: none;
+}
+
+.footer__link {
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer__link:hover {
+  color: var(--accent);
+}
+
+/* Redes sociais */
+.footer__social {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 20px;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 1.25rem;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.footer__social-link:hover {
+  background: var(--accent);
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Créditos */
+.footer__credits {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.footer__credits strong {
+  color: var(--text-primary);
+}
