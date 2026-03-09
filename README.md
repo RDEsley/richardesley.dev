@@ -72,26 +72,6 @@ cd portfolio-fullstack
 
 Abra o arquivo **index.html** no navegador.
 
----
-
-## 📂 Estrutura do Projeto
-
-```text
-├── index.html
-├── en/index.html
-├── assets/images/
-├── src/
-│   ├── styles/
-│   │   ├── base.css
-│   │   ├── theme.css
-│   │   ├── components/
-│   │   ├── sections.css
-│   │   └── main.css
-│   ├── scripts/
-│   ├── data/
-│   ├── pdfs/
-│   └── files/
-└── README.md
 ```
 
 ## 📖 Aprendizados
