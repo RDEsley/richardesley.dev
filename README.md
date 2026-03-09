@@ -69,10 +69,11 @@ git clone https://github.com/RDEsley/portfolio-fullstack.git
 # 2. Acesse a pasta
 cd portfolio-fullstack
 
+```
 
 Abra o arquivo **index.html** no navegador.
 
-```
+
 
 ## 📖 Aprendizados
 
