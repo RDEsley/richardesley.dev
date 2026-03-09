@@ -10,7 +10,7 @@ const PROJETOS = [
     statusDate: true, // adiciona data atual automaticamente (YYYY.MM.DD)  
     descricao:
       "Sistema completo para gestão de granjas, controle de insumos, produção e relatórios em Dashboard.",
-    imagem: "assets/images/Granja-Mult-Core.png", 
+    imagem: "assets/images/granja-mult-core.png", 
     tech: ["Angular", "Typescript", "Supabase", "HTML/CSS", "Dashboard"],
     site: "https://gmc-granja-mult-core.vercel.app/login",
   },
