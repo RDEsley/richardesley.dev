@@ -5,36 +5,42 @@
 
 const PROJETOS = [
   {
-    titulo: "Sistema de Farm Management",
-    descricao:
-      "Sistema completo para gestão de fazendas, controle de insumos, produção e relatórios.",
-    imagem: "assets/images/richard-cafe.jpeg", // Toque descontraído - programador no café
-    tech: ["Python", "Flask", "SQLite", "HTML/CSS"],
-    repo: "https://github.com/RDEsley",
-    site: null,
+    titulo: "WhatsApp - App de Envio de Mensagens",
+    status: "Finalizado",
+    statusDate: false, 
+    descricao: "Uma replica do App WhatsApp com funcionalidades básicas.",
+    imagem: "assets/images/whatsapp.png",
+    tech: ["Android Studio", "Java", "Kotlin", "XML", "Firebase", "Firebase Auth", "Firebase Database", "Firebase Storage"],
+    repo: "https://github.com/RDEsley/App_WhatsApp"
   },
   {
-    titulo: "Brasali Dedetizadora",
-    descricao: "Site institucional para empresa de dedetização. Apresentação de serviços e contato.",
-    imagem: null,
-    tech: ["HTML", "CSS", "JavaScript", "WordPress"],
-    repo: null,
-    site: "#",
-  },
-  {
-    titulo: "Xeque Mate Dedetizadora",
-    descricao: "Site para empresa de controle de pragas urbanas. Design responsivo e foco em conversão.",
-    imagem: null,
+    titulo: "Fate Eight Tech",
+    status: "Em funcionamento",
+    statusDate: false, 
+    descricao: "Site da Fate Eight Tech, uma empresa de Marketing Digital e desenvolvimento de Softwares.",
+    imagem: "assets/images/fateeighttech.png",
     tech: ["HTML", "CSS", "JavaScript"],
-    repo: null,
-    site: "#",
+    repo: "https://github.com/fateeighttech",
+    site: "https://fateeight.com.br",
   },
   {
-    titulo: "Controle de Pragas ETB",
-    descricao: "Projeto de monitoramento e controle de pragas desenvolvido em contexto de liderança técnica na ETB.",
-    imagem: null,
-    tech: ["Python", "Flask", "React"],
-    repo: "https://github.com/RDEsley",
-    site: null,
+    titulo: "GMC (Granja Mult Core)",
+    status: "Em Desenvolvimento",
+    statusDate: true, // adiciona data atual automaticamente (YYYY.MM.DD)
+    descricao:
+      "Sistema completo para gestão de granjas, controle de insumos, produção e relatórios em Dashboard.",
+    imagem: "assets/images/granja-mult-core.png", 
+    tech: ["Angular", "Typescript", "Supabase", "HTML/CSS", "Dashboard"],
+    site: "https://gmc-granja-mult-core.vercel.app/login",
   },
+  {
+    titulo: "Purple Kaizen - SaaS de Gestão de Clientes",
+    status: "Em desenvolvimento",
+    statusDate: true, 
+    descricao: "Sistema para gerenciar clientes de uma empresa de forma prática e organizada.",
+    imagem: "assets/images/purple-kaizen.png",
+    tech: ["React", "Vite", "Typescript", "Node.js", "Express", "PostgreSQL"],
+    repo: "https://github.com/RDEsley/PurpleKaizen",
+  },
+
 ];
