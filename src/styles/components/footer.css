@@ -49,14 +49,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 40px;
+  width: 40px;
   height: 40px;
-  padding: 0 10px;
-  border-radius: 20px;
+  border-radius: 50%;
   background: var(--accent-light);
   color: var(--accent);
-  font-size: 1.25rem;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.footer__social-link svg {
+  flex-shrink: 0;
 }
 
 .footer__social-link:hover {

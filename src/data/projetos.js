@@ -5,36 +5,23 @@
 
 const PROJETOS = [
   {
-    titulo: "Sistema de Farm Management",
+    titulo: "GMC (Granja Mult Core)",
+    status: "Em Desenvolvimento",
+    statusDate: true, // adiciona data atual automaticamente (YYYY.MM.DD)  
     descricao:
-      "Sistema completo para gestão de fazendas, controle de insumos, produção e relatórios.",
-    imagem: "assets/images/richard-cafe.jpeg", // Toque descontraído - programador no café
-    tech: ["Python", "Flask", "SQLite", "HTML/CSS"],
-    repo: "https://github.com/RDEsley",
-    site: null,
+      "Sistema completo para gestão de granjas, controle de insumos, produção e relatórios em Dashboard.",
+    imagem: "assets/images/Granja-Mult-Core.png", 
+    tech: ["Angular", "Typescript", "Supabase", "HTML/CSS", "Dashboard"],
+    site: "https://gmc-granja-mult-core.vercel.app/login",
   },
   {
-    titulo: "Brasali Dedetizadora",
-    descricao: "Site institucional para empresa de dedetização. Apresentação de serviços e contato.",
-    imagem: null,
-    tech: ["HTML", "CSS", "JavaScript", "WordPress"],
-    repo: null,
-    site: "#",
-  },
-  {
-    titulo: "Xeque Mate Dedetizadora",
-    descricao: "Site para empresa de controle de pragas urbanas. Design responsivo e foco em conversão.",
-    imagem: null,
+    titulo: "Fate Eight Tech",
+    status: "Em funcionamento",
+    statusDate: false, 
+    descricao: "Site da Fate Eight Tech, uma empresa de Marketing Digital e desenvolvimento de Softwares.",
+    imagem: "assets/images/fateeighttech.png",
     tech: ["HTML", "CSS", "JavaScript"],
-    repo: null,
-    site: "#",
-  },
-  {
-    titulo: "Controle de Pragas ETB",
-    descricao: "Projeto de monitoramento e controle de pragas desenvolvido em contexto de liderança técnica na ETB.",
-    imagem: null,
-    tech: ["Python", "Flask", "React"],
-    repo: "https://github.com/RDEsley",
-    site: null,
-  },
+    repo: "https://github.com/fateeighttech",
+    site: "https://fateeight.com.br",
+  }
 ];

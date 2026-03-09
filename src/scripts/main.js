@@ -111,6 +111,17 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /**
+ * Retorna a data de hoje no formato YYYY.MM.DD (atualiza automaticamente a cada dia)
+ */
+function formatarDataHoje() {
+  const d = new Date();
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${y}.${m}.${day}`;
+}
+
+/**
  * Renderiza os projetos no grid a partir de PROJETOS
  * Usa lang do HTML para labels (Repositório/Repository, Site)
  */
@@ -136,10 +147,16 @@ function renderizarProjetos() {
     if (p.repo) links.push(`<a href="${p.repo}" target="_blank" rel="noopener" class="card__link">${lblRepo}</a>`);
     if (p.site) links.push(`<a href="${p.site}" target="_blank" rel="noopener" class="card__link">${lblSite}</a>`);
 
+    const statusText = p.status
+      ? (p.statusDate ? `${p.status} (${formatarDataHoje()})` : p.status)
+      : "";
+    const statusBadge = statusText ? `<span class="card__status">${statusText}</span>` : "";
+
     return `
       <article class="card card--project">
         ${img}
         <h3 class="card__title">${p.titulo}</h3>
+        ${statusBadge}
         <p class="card__description">${p.descricao}</p>
         <div class="card__tags">${tags}</div>
         <div class="card__links">${links.join("")}</div>
