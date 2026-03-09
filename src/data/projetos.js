@@ -26,7 +26,7 @@ const PROJETOS = [
   {
     titulo: "GMC (Granja Mult Core)",
     status: "Em Desenvolvimento",
-    statusDate: true, // adiciona data atual automaticamente (YYYY.MM.DD)  (muito legal)
+    statusDate: true, // adiciona data atual automaticamente (YYYY.MM.DD)
     descricao:
       "Sistema completo para gestão de granjas, controle de insumos, produção e relatórios em Dashboard.",
     imagem: "assets/images/granja-mult-core.png", 
