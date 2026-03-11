@@ -22,11 +22,17 @@
     <div class="navbar__inner">
       <a href="#home" class="navbar__brand">Richard Oliveira</a>
 
-      <button class="navbar__hamburger" aria-label="Abrir menu" type="button">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <div class="navbar__right">
+        <div class="navbar__actions">
+          <button id="theme-toggle" class="navbar__theme-btn" aria-label="Alternar tema" type="button">&#9728;</button>
+          <a href="en/" class="navbar__lang" hreflang="en">EN</a>
+        </div>
+        <button class="navbar__hamburger" aria-label="Abrir menu" type="button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
 
       <div class="navbar__nav">
         <ul class="navbar__links">
@@ -37,10 +43,6 @@
           <li><a href="#github" class="navbar__link">GitHub</a></li>
           <li><a href="#contato" class="navbar__link">Contato</a></li>
         </ul>
-        <div class="navbar__actions">
-          <button id="theme-toggle" class="navbar__theme-btn" aria-label="Alternar tema" type="button">&#9728;</button>
-          <a href="en/" class="navbar__lang" hreflang="en">EN</a>
-        </div>
       </div>
     </div>
   </nav>

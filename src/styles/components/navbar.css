@@ -26,8 +26,20 @@
   gap: var(--space-4);
 }
 
+/* Desktop: ordem brand | nav | right (actions + hamburger oculto) */
+.navbar__nav {
+  order: 2;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.navbar__right {
+  order: 3;
+}
+
 /* Logo / Nome */
 .navbar__brand {
+  order: 1;
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--navbar-text);
@@ -37,6 +49,13 @@
 
 .navbar__brand:hover {
   color: var(--accent);
+}
+
+/* Lado direito: ações + hamburger (mobile) */
+.navbar__right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
 }
 
 /* Menu de navegação */
@@ -102,13 +121,23 @@
   font-weight: 600;
   color: var(--accent);
   padding: var(--space-1) var(--space-2);
-  border-radius: 6px;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--bg-secondary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 40px;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .navbar__lang:hover {
   background: var(--accent-light);
+  border-color: var(--accent);
   color: var(--accent-hover);
+  transform: scale(1.05);
 }
 
 /* Hamburger menu (mobile) */
@@ -142,13 +171,23 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Mobile: menu colapsável */
+/* Mobile: menu colapsável, ações ao lado do hamburger */
 @media (max-width: 768px) {
   .navbar__hamburger {
     display: flex;
   }
 
+  .navbar__brand {
+    order: 1;
+  }
+
+  .navbar__right {
+    order: 2;
+  }
+
   .navbar__nav {
+    order: 3;
+    flex: none;
     position: absolute;
     top: 100%;
     left: 0;
