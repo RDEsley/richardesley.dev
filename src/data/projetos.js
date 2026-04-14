@@ -31,7 +31,7 @@ const PROJETOS = [
       "Sistema completo para gestão de granjas, controle de insumos, produção e relatórios em Dashboard.",
     imagem: "assets/images/granja-mult-core.png", 
     tech: ["Angular", "Typescript", "Supabase", "HTML/CSS", "Dashboard"],
-    site: "https://gmc-granja-mult-core.vercel.app/login",
+    site: "https://gmc-granja-mult-core.vercel.app/",
   },
   {
     titulo: "Purple Kaizen - SaaS de Gestão de Clientes",
