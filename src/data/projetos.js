@@ -40,6 +40,7 @@ const PROJETOS = [
     descricao: "Sistema para gerenciar clientes de uma empresa de forma prática e organizada.",
     imagem: "assets/images/purple-kaizen.png",
     tech: ["React", "Vite", "Typescript", "Node.js", "Express", "PostgreSQL"],
+    site: "https://purple-kaizen.vercel.app/",
     repo: "https://github.com/RDEsley/PurpleKaizen",
   },
 
