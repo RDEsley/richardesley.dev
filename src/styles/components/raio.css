@@ -1,0 +1,48 @@
+/**
+ * raio.css - Camada do raio que cai no clique
+ * A geometria e o timing vêm de src/scripts/raio.js (Web Animations API);
+ * aqui só ficam os estilos visuais estáticos de cada traço.
+ */
+
+#raio-layer {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: visible;
+}
+
+.raio__bolt {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.raio__bolt--halo {
+  stroke: var(--spark, #ffb524);
+  stroke-width: 9;
+  filter: blur(6px);
+  opacity: 0.55;
+}
+
+.raio__bolt--outer {
+  stroke: #ffd76a;
+  stroke-width: 3.2;
+}
+
+.raio__bolt--inner {
+  stroke: #fffdf5;
+  stroke-width: 1.3;
+}
+
+.raio__spark {
+  fill: #ffd76a;
+}
+
+.raio__ring {
+  fill: none;
+  stroke: #ffd76a;
+  stroke-width: 2;
+}

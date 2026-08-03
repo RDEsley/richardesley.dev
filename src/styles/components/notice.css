@@ -1,0 +1,91 @@
+/**
+ * notice.css - Diálogo de aviso reutilizável (repositório privado, certificado sem PDF)
+ * Substitui o alert() nativo do browser por um componente do próprio design system.
+ */
+
+.notice {
+  border: none;
+  padding: 0;
+  border-radius: var(--radius-lg);
+  max-width: 420px;
+  width: calc(100% - var(--space-4));
+  background: transparent;
+  color: var(--text-primary);
+}
+
+.notice::backdrop {
+  background: rgba(20, 32, 31, 0.55);
+}
+
+.notice__panel {
+  position: relative;
+  background: var(--bg-card);
+  border: var(--ink-width) solid var(--ink);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-4);
+}
+
+.notice__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--spark-light);
+  border: var(--ink-width) solid var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  margin-bottom: var(--space-2);
+}
+
+.notice__icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.notice__title {
+  font-family: "Bricolage Grotesque", "DM Sans", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+  color: var(--text-primary);
+}
+
+.notice__text {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-4);
+  font-size: 0.95rem;
+}
+
+.notice__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  justify-content: flex-end;
+}
+
+.notice__close {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: var(--ink-width) solid var(--border-color);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  line-height: 1;
+  transition: transform 0.15s var(--ease-pop), background-color 0.2s ease;
+}
+
+.notice__close:hover {
+  background: var(--accent-light);
+  transform: rotate(90deg);
+}

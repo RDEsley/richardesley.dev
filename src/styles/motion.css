@@ -1,0 +1,110 @@
+/**
+ * motion.css - Keyframes do sistema de movimento "Comic Ink"
+ * Letras dançando, entrada por scroll, squiggle desenhado e reduced-motion
+ */
+
+/* ========== LETRAS DANÇANDO (hover) ========== */
+.dance__c {
+  display: inline-block;
+  will-change: transform;
+}
+
+[data-dance]:hover .dance__c,
+[data-dance]:focus-within .dance__c {
+  animation: dance-hop 0.6s var(--ease-pop);
+  animation-delay: calc(var(--i, 0) * 42ms);
+}
+
+@keyframes dance-hop {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1, 1);
+  }
+  22% {
+    transform: translateY(-1px) rotate(0deg) scale(1.08, 0.9);
+  }
+  45% {
+    transform: translateY(-11px) rotate(-7deg) scale(0.94, 1.1);
+  }
+  68% {
+    transform: translateY(2px) rotate(4deg) scale(1.1, 0.9);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1, 1);
+  }
+}
+
+/* ========== ENTRADA POR SCROLL ========== */
+html.reveal-ready .reveal {
+  opacity: 0;
+  transform: translateY(18px) scale(0.97);
+  transition: opacity var(--dur-slow) var(--ease-pop), transform var(--dur-slow) var(--ease-pop);
+  transition-delay: calc(var(--reveal-i, 0) * 60ms);
+}
+
+html.reveal-ready .reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* ========== SQUIGGLE DOS H2 (sublinhado desenhado à mão) ========== */
+.section-heading {
+  position: relative;
+  display: inline-block;
+  margin-bottom: calc(var(--space-3) + 10px);
+}
+
+.section-heading::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  bottom: -6px;
+  height: 8px;
+  background-color: var(--spark);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 12' preserveAspectRatio='none'%3E%3Cpath d='M2 8 C 14 2, 22 2, 32 7 S 50 12, 60 6 S 80 1, 92 7 S 110 11, 118 5' stroke='%23000' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 12' preserveAspectRatio='none'%3E%3Cpath d='M2 8 C 14 2, 22 2, 32 7 S 50 12, 60 6 S 80 1, 92 7 S 110 11, 118 5' stroke='%23000' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  width: 0%;
+  transition: width 0.6s var(--ease-out) 0.15s;
+}
+
+html.reveal-ready .section-heading.reveal.is-visible::after {
+  width: 100%;
+}
+
+html:not(.reveal-ready) .section-heading::after {
+  width: 100%;
+}
+
+/* ========== REDUCED MOTION ========== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html.reveal-ready .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .card--project,
+  .hero__image {
+    transform: none !important;
+  }
+
+  #raio-layer {
+    display: none !important;
+  }
+}

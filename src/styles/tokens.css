@@ -1,0 +1,22 @@
+/**
+ * tokens.css - Tokens de design "Comic Ink"
+ * Raio, duração, easing e espessura de traço, usados por todos os componentes
+ */
+
+:root {
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  --dur-fast: 0.15s;
+  --dur-base: 0.25s;
+  --dur-slow: 0.45s;
+
+  /* Overshoot: o "pulinho" que dá cara de cartoon a qualquer transição */
+  --ease-pop: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --ink-width: 2px;
+  --pop-offset: 4px;
+}

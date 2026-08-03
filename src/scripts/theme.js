@@ -7,11 +7,13 @@ const TEMA_KEY = "tema";
 const TEMA_ESCURO = "escuro";
 
 /**
- * Carrega o tema salvo e aplica na página
+ * Carrega o tema salvo e aplica na página.
+ * Sem preferência salva, respeita o tema do sistema (prefers-color-scheme) na primeira visita.
  */
 function carregarTema() {
   const temaSalvo = localStorage.getItem(TEMA_KEY);
-  const isEscuro = temaSalvo === TEMA_ESCURO;
+  const prefereEscuro = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const isEscuro = temaSalvo ? temaSalvo === TEMA_ESCURO : prefereEscuro;
 
   if (isEscuro) {
     document.body.classList.add("dark-theme");
