@@ -397,3 +397,8 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 .vercel
+
+# Claude
+.CLAUDE.md
+.claude
+claude
