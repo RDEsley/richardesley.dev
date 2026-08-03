@@ -1,6 +1,6 @@
 /**
  * certificados.js - Renderiza os certificados no DOM
- * Depende de src/data/certificados.js (CERTIFICADOS)
+ * Depende de src/data/certificados.js (CERTIFICADOS) e src/scripts/aviso.js (abrirAviso)
  */
 
 /**
@@ -29,26 +29,39 @@ function contarCertificados() {
 function renderizarCertificados(container) {
   if (!container || typeof CERTIFICADOS === "undefined") return;
 
-  CERTIFICADOS.forEach((certificado) => {
+  const isEn = document.documentElement.lang === "en";
+  const lblInstituicao = isEn ? "Institution" : "Instituição";
+  const lblAno = isEn ? "Year" : "Ano";
+  const basePath = window.location.pathname.includes("/en/") ? "../" : "";
+
+  CERTIFICADOS.forEach((certificado, indice) => {
     const item = document.createElement("div");
-    item.classList.add("card", "card--certificate");
+    item.classList.add("card", "card--certificate", "reveal");
 
     const conteudo = `
       <h3>${certificado.nome}</h3>
-      <p><strong>Instituição:</strong> ${certificado.instituicao}</p>
-      <p><strong>Ano:</strong> ${certificado.ano}</p>
+      <p><strong>${lblInstituicao}:</strong> ${certificado.instituicao}</p>
+      <p><strong>${lblAno}:</strong> ${certificado.ano}</p>
     `;
 
     if (certificado.url) {
+      const href = basePath + certificado.url;
       item.innerHTML = `
-        <a href="${certificado.url}" target="_blank" rel="noopener noreferrer" class="card__link">
+        <a href="${href}" target="_blank" rel="noopener noreferrer" class="card__link">
           ${conteudo}
         </a>
       `;
     } else {
-      item.innerHTML = `<div class="card__link" data-certificado="${certificado.nome}">${conteudo}</div>`;
+      item.innerHTML = `<button type="button" class="card__link" data-certificado="${certificado.nome}">${conteudo}</button>`;
       item.querySelector(".card__link").addEventListener("click", () => {
-        alert(`O certificado "${certificado.nome}" ainda não possui PDF disponível.`);
+        abrirAviso({
+          titulo: isEn ? "Certificate without PDF" : "Certificado sem PDF",
+          texto: isEn
+            ? `The certificate "${certificado.nome}" doesn't have a downloadable PDF yet. I'm happy to send it by email if you need proof.`
+            : `O certificado "${certificado.nome}" ainda não tem PDF para download. Posso enviá-lo por e-mail se precisar de comprovação.`,
+          cta: { label: isEn ? "Get in touch" : "Falar comigo", href: "#contato" },
+          fecharLabel: isEn ? "Close" : "Fechar",
+        });
       });
     }
 

@@ -122,6 +122,21 @@ function formatarDataHoje() {
 }
 
 /**
+ * Resolve um campo que pode ser string (mesmo texto nos dois idiomas) ou { pt, en }
+ */
+function t(valor, isEn) {
+  if (valor == null) return "";
+  if (typeof valor === "string") return valor;
+  return (isEn ? valor.en : valor.pt) || "";
+}
+
+const ICONE_CADEADO =
+  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>';
+
+const ICONE_RAIO =
+  '<svg class="card__image-bolt" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>';
+
+/**
  * Renderiza os projetos no grid a partir de PROJETOS
  * Usa lang do HTML para labels (Repositório/Repository, Site)
  */
@@ -138,29 +153,52 @@ function renderizarProjetos() {
   grid.innerHTML = PROJETOS.map((p) => {
     const imgSrc = p.imagem ? (p.imagem.startsWith("http") ? p.imagem : basePath + p.imagem) : null;
     const img = imgSrc
-      ? `<img src="${imgSrc}" alt="${p.titulo}" class="card__image" />`
-      : `<div class="card__image" style="background: var(--accent-light); display: flex; align-items: center; justify-content: center; color: var(--accent); font-weight: 600;">${lblProjeto}</div>`;
-    const tags = (p.tech || [])
-      .map((t) => `<span class="card__tag">${t}</span>`)
-      .join("");
-    const links = [];
-    if (p.repo) links.push(`<a href="${p.repo}" target="_blank" rel="noopener" class="card__link">${lblRepo}</a>`);
-    if (p.site) links.push(`<a href="${p.site}" target="_blank" rel="noopener" class="card__link">${lblSite}</a>`);
+      ? `<img src="${imgSrc}" alt="${p.titulo}" class="card__image" loading="lazy" decoding="async" />`
+      : `<div class="card__image card__image--placeholder">${ICONE_RAIO}<span class="card__image-letter">${(p.titulo.trim().charAt(0) || lblProjeto.charAt(0)).toUpperCase()}</span></div>`;
 
-    const statusText = p.status
-      ? (p.statusDate ? `${p.status} (${formatarDataHoje()})` : p.status)
-      : "";
+    const tags = (p.tech || [])
+      .map((tc) => `<span class="card__tag">${tc}</span>`)
+      .join("");
+
+    const links = [];
+    if (p.repoPrivado) {
+      links.push(
+        `<button type="button" class="card__link card__link--privado" data-aviso="repo-privado" data-site="${p.site || ""}">${ICONE_CADEADO}${lblRepo}</button>`
+      );
+    } else if (p.repo) {
+      links.push(`<a href="${p.repo}" target="_blank" rel="noopener noreferrer" class="card__link">${lblRepo}</a>`);
+    }
+    if (p.site) links.push(`<a href="${p.site}" target="_blank" rel="noopener noreferrer" class="card__link">${lblSite}</a>`);
+
+    const statusTexto = t(p.status, isEn);
+    const statusText = statusTexto ? (p.statusDate ? `${statusTexto} (${formatarDataHoje()})` : statusTexto) : "";
     const statusBadge = statusText ? `<span class="card__status">${statusText}</span>` : "";
 
+    const classeCard = "card card--project reveal" + (p.destaque ? " card--destaque" : "");
+
     return `
-      <article class="card card--project">
+      <article class="${classeCard}">
         ${img}
-        <h3 class="card__title">${p.titulo}</h3>
+        <h3 class="card__title" data-dance>${p.titulo}</h3>
         ${statusBadge}
-        <p class="card__description">${p.descricao}</p>
+        <p class="card__description">${t(p.descricao, isEn)}</p>
         <div class="card__tags">${tags}</div>
         <div class="card__links">${links.join("")}</div>
       </article>
     `;
   }).join("");
+
+  grid.addEventListener("click", (e) => {
+    const alvo = e.target instanceof Element ? e.target.closest("[data-aviso='repo-privado']") : null;
+    if (!alvo) return;
+    const site = alvo.dataset.site;
+    abrirAviso({
+      titulo: isEn ? "Private repository" : "Repositório privado",
+      texto: isEn
+        ? "GMC is under active development under contract and its source code remains private. I'm glad to walk through the architecture, technical decisions and code samples in a conversation or interview."
+        : "O GMC (Granja Mult Core) está em desenvolvimento sob contrato e o código-fonte permanece privado. Posso apresentar a arquitetura, as decisões técnicas e trechos do código em uma conversa ou entrevista.",
+      cta: site ? { label: isEn ? "See it live" : "Ver sistema no ar", href: site } : null,
+      fecharLabel: isEn ? "Close" : "Fechar",
+    });
+  });
 }

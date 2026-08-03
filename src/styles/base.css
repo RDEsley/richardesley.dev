@@ -42,6 +42,11 @@ a:hover {
   opacity: 0.9;
 }
 
+::selection {
+  background: var(--spark);
+  color: var(--ink);
+}
+
 /* ========== SISTEMA DE ESPAÇAMENTO (8px base) ========== */
 :root {
   --space-1: 0.5rem;   /* 8px */
@@ -54,8 +59,11 @@ a:hover {
 }
 
 /* ========== TIPOGRAFIA ========== */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
+h1, h2, h3, h4, h5, h6,
+.navbar__brand,
+.hero__greeting {
+  font-family: "Bricolage Grotesque", "DM Sans", system-ui, -apple-system, sans-serif;
+  font-weight: 700;
   line-height: 1.2;
 }
 

@@ -12,7 +12,7 @@
   background: var(--navbar-bg);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--navbar-border);
+  border-bottom: var(--ink-width) solid var(--navbar-border);
   padding: var(--space-2) var(--space-4);
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
@@ -97,8 +97,8 @@
 .navbar__theme-btn {
   width: 40px;
   height: 40px;
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border: var(--ink-width) solid var(--border-color);
+  border-radius: var(--radius-md);
   background: var(--bg-secondary);
   color: var(--text-primary);
   cursor: pointer;
@@ -106,13 +106,20 @@
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
-  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  box-shadow: var(--shadow-sm);
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s var(--ease-pop), box-shadow 0.15s var(--ease-pop);
 }
 
 .navbar__theme-btn:hover {
   background: var(--accent-light);
   border-color: var(--accent);
-  transform: scale(1.05);
+  transform: translate(-1px, -1px);
+  box-shadow: var(--shadow-md);
+}
+
+.navbar__theme-btn:active {
+  transform: translate(1px, 1px);
+  box-shadow: none;
 }
 
 /* Link idioma */
@@ -121,8 +128,8 @@
   font-weight: 600;
   color: var(--accent);
   padding: var(--space-1) var(--space-2);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border: var(--ink-width) solid var(--border-color);
+  border-radius: var(--radius-md);
   background: var(--bg-secondary);
   text-decoration: none;
   display: inline-flex;
@@ -130,14 +137,21 @@
   justify-content: center;
   min-width: 40px;
   min-height: 40px;
-  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  box-shadow: var(--shadow-sm);
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.15s var(--ease-pop), box-shadow 0.15s var(--ease-pop);
 }
 
 .navbar__lang:hover {
   background: var(--accent-light);
   border-color: var(--accent);
   color: var(--accent-hover);
-  transform: scale(1.05);
+  transform: translate(-1px, -1px);
+  box-shadow: var(--shadow-md);
+}
+
+.navbar__lang:active {
+  transform: translate(1px, 1px);
+  box-shadow: none;
 }
 
 /* Hamburger menu (mobile) */

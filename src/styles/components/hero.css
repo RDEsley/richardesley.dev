@@ -1,6 +1,6 @@
 /**
  * hero.css - Seção Hero / Home
- * Catchphrase, foto e CTAs
+ * Balão de fala, halftone de fundo, foto "sticker" e CTAs de tinta
  */
 
 .hero {
@@ -9,9 +9,26 @@
   align-items: center;
   padding-top: 80px; /* Offset navbar fixa */
   padding-bottom: var(--space-6);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Halftone de jornal atrás do conteúdo, some nas bordas */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(var(--ink) 1.5px, transparent 1.6px);
+  background-size: 22px 22px;
+  opacity: 0.09;
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 72% 32%, black 0%, transparent 70%);
+  mask-image: radial-gradient(ellipse 80% 60% at 72% 32%, black 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .hero__inner {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-6);
@@ -26,18 +43,48 @@
   order: 1;
 }
 
+/* Balão de fala, no lugar do eyebrow maiúsculo genérico */
 .hero__greeting {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
   font-size: 1rem;
-  font-weight: 600;
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: var(--space-2);
+  font-weight: 700;
+  color: var(--ink);
+  background: var(--bg-card);
+  border: var(--ink-width) solid var(--ink);
+  border-radius: var(--radius-pill);
+  padding: 6px 18px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: calc(var(--space-2) + 12px);
+}
+
+.hero__greeting::before {
+  content: "";
+  position: absolute;
+  left: 22px;
+  bottom: -12px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 12px solid var(--ink);
+}
+
+.hero__greeting::after {
+  content: "";
+  position: absolute;
+  left: 24px;
+  bottom: -7px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 9px solid var(--bg-card);
 }
 
 .hero__title {
   font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 700;
   line-height: 1.1;
   margin-bottom: var(--space-3);
   color: var(--text-primary);
@@ -65,32 +112,37 @@
   padding: var(--space-2) var(--space-4);
   font-weight: 600;
   font-size: 1rem;
-  border-radius: 8px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: var(--radius-pill);
+  border: var(--ink-width) solid var(--ink);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.15s var(--ease-pop), box-shadow 0.15s var(--ease-pop), background-color 0.2s ease;
+}
+
+.hero__cta:active {
+  transform: translate(1px, 1px);
+  box-shadow: none;
 }
 
 .hero__cta--primary {
   background: var(--accent);
   color: white;
-  border: 2px solid var(--accent);
 }
 
 .hero__cta--primary:hover {
   background: var(--accent-hover);
-  border-color: var(--accent-hover);
-  transform: translateY(-2px);
+  transform: translate(-2px, -2px);
   box-shadow: var(--shadow-md);
 }
 
 .hero__cta--secondary {
   background: transparent;
   color: var(--accent);
-  border: 2px solid var(--accent);
 }
 
 .hero__cta--secondary:hover {
   background: var(--accent-light);
-  transform: translateY(-2px);
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-md);
 }
 
 /* Imagem */
@@ -99,10 +151,33 @@
   position: relative;
 }
 
+/* Doodle de raio espiando atrás da foto */
+.hero__image-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  right: -16px;
+  bottom: -16px;
+  background: var(--spark);
+  border: var(--ink-width) solid var(--ink);
+  clip-path: polygon(58% 0%, 20% 55%, 48% 55%, 38% 100%, 82% 42%, 52% 42%);
+  transform: rotate(-8deg);
+  z-index: -1;
+}
+
 .hero__image {
-  border-radius: 16px;
+  border: var(--ink-width) solid var(--ink);
+  border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
+  transform: rotate(-1.6deg);
+  transition: transform 0.3s var(--ease-pop), box-shadow 0.3s var(--ease-pop);
+}
+
+.hero__image:hover {
+  transform: rotate(0deg) translate(-3px, -3px);
+  box-shadow: var(--shadow-pop-hover);
 }
 
 .hero__image img {

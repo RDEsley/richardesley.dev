@@ -1,59 +1,75 @@
 /**
  * theme.css - Tema Light e Dark
- * Variáveis de cores e transições suaves na troca de temas
+ * Paleta "papel + tinta + faísca" — sombras duras (sem blur) fazem o efeito quadrinho
  */
 
 /* ========== TEMA CLARO (padrão) ========== */
 :root {
-  /* Cores principais */
-  --bg-primary: #f9fafb;
-  --bg-secondary: #ffffff;
-  --bg-card: #ffffff;
+  /* Cores principais - papel quente */
+  --bg-primary: #faf6ef;
+  --bg-secondary: #fffdf8;
+  --bg-card: #fffdf8;
 
   /* Texto */
-  --text-primary: #1f2937;
-  --text-secondary: #6b7280;
-  --text-muted: #9ca3af;
+  --text-primary: #1c2624;
+  --text-secondary: #4b5a56;
+  --text-muted: #7c8a86;
 
-  /* Accent - Teal profissional */
-  --accent: #0d9488;
-  --accent-hover: #0f766e;
-  --accent-light: #ccfbf1;
+  /* Accent - Teal autoral (fora da paleta padrão) */
+  --accent: #10877a;
+  --accent-hover: #0c6a60;
+  --accent-light: #d8f3ee;
 
-  /* Bordas e sombras */
-  --border-color: #e5e7eb;
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  /* Faísca - cor de destaque do raio, seleção e squiggle */
+  --spark: #ffb524;
+  --spark-light: #fff1d1;
+
+  /* Tinta - contorno e sombra dura */
+  --ink: #14201f;
+  --shadow-ink: #14201f;
+  --border-color: var(--ink);
+
+  --shadow-sm: 2px 2px 0 var(--shadow-ink);
+  --shadow-md: 4px 4px 0 var(--shadow-ink);
+  --shadow-lg: 8px 8px 0 var(--shadow-ink);
+  --shadow-pop-hover: 7px 7px 0 var(--shadow-ink);
 
   /* Navbar */
-  --navbar-bg: rgba(255, 255, 255, 0.95);
-  --navbar-text: #1f2937;
-  --navbar-border: rgba(0, 0, 0, 0.06);
+  --navbar-bg: rgba(250, 246, 239, 0.92);
+  --navbar-text: #1c2624;
+  --navbar-border: var(--ink);
 }
 
 /* ========== TEMA ESCURO ========== */
 body.dark-theme {
-  --bg-primary: #111827;
-  --bg-secondary: #1f2937;
-  --bg-card: #1f2937;
+  --bg-primary: #17130f;
+  --bg-secondary: #201a14;
+  --bg-card: #201a14;
 
-  --text-primary: #f3f4f6;
-  --text-secondary: #d1d5db;
-  --text-muted: #9ca3af;
+  --text-primary: #f5efe4;
+  --text-secondary: #cbbfa9;
+  --text-muted: #96897c;
 
-  --accent: #2dd4bf;
+  --accent: #35c9b6;
   --accent-hover: #5eead4;
-  --accent-light: #134e4a;
+  --accent-light: #123c37;
 
-  --border-color: #374151;
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.2);
+  --spark: #ffcf6b;
+  --spark-light: #3a2c11;
 
-  --navbar-bg: rgba(17, 24, 39, 0.95);
-  --navbar-text: #f3f4f6;
-  --navbar-border: rgba(255, 255, 255, 0.06);
+  /* Tinta clara pra contornar (contra fundo escuro); sombra some no preto, então continua escura */
+  --ink: #efe6d5;
+  --shadow-ink: #050907;
+  --border-color: var(--ink);
+
+  --shadow-sm: 2px 2px 0 var(--shadow-ink);
+  --shadow-md: 4px 4px 0 var(--shadow-ink);
+  --shadow-lg: 8px 8px 0 var(--shadow-ink);
+  --shadow-pop-hover: 7px 7px 0 var(--shadow-ink);
+
+  --navbar-bg: rgba(23, 19, 15, 0.92);
+  --navbar-text: #f5efe4;
+  --navbar-border: var(--ink);
 }
 
 /* Transições suaves em elementos que mudam com o tema */

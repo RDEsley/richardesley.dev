@@ -11,6 +11,9 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://richardesley.dev/en/">
   <meta property="og:image" content="https://richardesley.dev/assets/images/richard-profissional.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../src/styles/main.css">
   <link rel="icon" type="image/png" sizes="16x16" href="../src/images/favicon-16x16.png">
   <link rel="alternate" hreflang="pt-br" href="https://richardesley.dev/">
@@ -20,7 +23,7 @@
   <!-- Navbar -->
   <nav class="navbar">
     <div class="navbar__inner">
-      <a href="#home" class="navbar__brand">Richard Oliveira</a>
+      <a href="#home" class="navbar__brand" data-dance>Richard Oliveira</a>
 
       <div class="navbar__right">
         <div class="navbar__actions">
@@ -53,7 +56,7 @@
       <div class="hero__inner">
         <div class="hero__content">
           <p class="hero__greeting">Hi, I'm Richard</p>
-          <h1 class="hero__title">Full Stack Developer & UI/UX Focus</h1>
+          <h1 class="hero__title" data-dance>Full Stack Developer & UI/UX Focus</h1>
           <p class="hero__catchphrase">Computer Science student focused on software development, practical projects, and continuous growth in technology.</p>
           <div class="hero__ctas">
             <a href="../src/files/cv.pdf" class="hero__cta hero__cta--primary" download>Download CV</a>
@@ -63,7 +66,7 @@
         </div>
         <div class="hero__image-wrapper">
           <div class="hero__image">
-            <img src="../assets/images/richard-descontraido.jpeg" alt="Richard Oliveira - Full Stack Developer">
+            <img src="../assets/images/richard-descontraido.jpeg" alt="Richard Oliveira - Full Stack Developer" fetchpriority="high" decoding="async">
           </div>
         </div>
       </div>
@@ -72,19 +75,19 @@
     <!-- About -->
     <section id="sobre" class="about">
       <div class="container">
-        <h2>About</h2>
+        <h2 class="section-heading reveal" data-dance>About</h2>
         <div class="about__inner">
           <div class="about__text">
             <p><strong>Bachelor in Computer Science (CEUB)</strong> and <strong>Technical in Informatics (ETB)</strong>. At CEUB, I led Integrator Project I: <strong>InstaAnalytics</strong>, an Instagram profile analysis platform — React, TypeScript, Tailwind, Supabase, Scraping, ML, and APIs. I organized sprints, defined architectures, and ensured delivery with 3 team members.</p>
             <p><strong>40+ repositories on GitHub</strong>. Founder of Fate Eight Tech. Experience as an administrative assistant—I automated reports and processes, improving the company's efficiency. Violin and viola player since age 12 — my favorite hobby. Full Stack Developer, guided by dedication and motivation.</p>
-            <a href="about.html" class="about__story-link">Read my full story →</a>
+            <a href="about.html" class="about__story-link" data-dance>Read my full story →</a>
           </div>
           <div class="about__images">
             <div class="about__image">
-              <img src="../assets/images/motivational.gif" alt="Richard Oliveira - Professional photo">
+              <img src="../assets/images/motivational.gif" alt="Richard Oliveira - Professional photo" loading="lazy" decoding="async">
             </div>
             <div class="about__image">
-              <img src="../assets/images/richard-violino.jpeg" alt="Richard Oliveira playing violin">
+              <img src="../assets/images/richard-violino.jpeg" alt="Richard Oliveira playing violin" loading="lazy" decoding="async">
             </div>
           </div>
         </div>
@@ -94,7 +97,7 @@
     <!-- Projects -->
     <section id="projetos" class="projects">
       <div class="container">
-        <h2>Projects</h2>
+        <h2 class="section-heading reveal" data-dance>Projects</h2>
         <div class="projects__grid">
           <!-- Rendered via JS -->
         </div>
@@ -105,7 +108,7 @@
     <section id="certificados" class="certificates">
       <div class="container">
         <div class="certificates__header">
-          <h2>Certificates</h2>
+          <h2 class="section-heading reveal" data-dance>Certificates</h2>
           <div class="certificates__counters"><!-- Rendered via JS --></div>
         </div>
         <div class="certificates__grid">
@@ -117,7 +120,7 @@
     <!-- GitHub -->
     <section id="github" class="github">
       <div class="container">
-        <h2>GitHub</h2>
+        <h2 class="section-heading reveal" data-dance>GitHub</h2>
         <a href="https://github.com/RDEsley" target="_blank" rel="noopener noreferrer" class="card github__card">
           <h3>@RDEsley</h3>
           <p>Check my profile and contributions on GitHub</p>
@@ -132,7 +135,7 @@
     <!-- Contact -->
     <section id="contato" class="contact">
       <div class="container">
-        <h2>Contact</h2>
+        <h2 class="section-heading reveal" data-dance>Contact</h2>
         <div class="contact__inner">
           <form id="contact-form" class="contact__form" action="https://formspree.io/f/xkoqnkek" method="POST">
             <input type="hidden" name="_subject" value="Portfolio Contact | richardesley.dev - New message">
@@ -189,14 +192,17 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
         </a>
       </div>
-      <p class="footer__credits">Made by <strong>Richard Oliveira</strong> · <span id="current-year">2025</span></p>
+      <p class="footer__credits">Made by <strong data-dance>Richard Oliveira</strong> · <span id="current-year">2025</span></p>
     </div>
   </footer>
 
   <script src="../src/data/certificados.js"></script>
   <script src="../src/data/projetos.js"></script>
   <script src="../src/scripts/theme.js"></script>
+  <script src="../src/scripts/aviso.js"></script>
   <script src="../src/scripts/certificados.js"></script>
   <script src="../src/scripts/main.js"></script>
+  <script src="../src/scripts/raio.js"></script>
+  <script src="../src/scripts/animacoes.js"></script>
 </body>
 </html>

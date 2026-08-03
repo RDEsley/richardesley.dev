@@ -5,7 +5,7 @@
 
 .footer {
   background: var(--bg-secondary);
-  border-top: 1px solid var(--border-color);
+  border-top: var(--ink-width) solid var(--border-color);
   padding: var(--space-6) var(--space-4);
   margin-top: var(--space-8);
 }
@@ -52,9 +52,11 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  border: var(--ink-width) solid var(--border-color);
   background: var(--accent-light);
   color: var(--accent);
-  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.15s var(--ease-pop), background-color 0.2s ease, color 0.2s ease, box-shadow 0.15s var(--ease-pop);
 }
 
 .footer__social-link svg {
@@ -64,7 +66,14 @@
 .footer__social-link:hover {
   background: var(--accent);
   color: white;
-  transform: scale(1.1);
+  border-color: var(--ink);
+  transform: translate(-2px, -2px) scale(1.05);
+  box-shadow: var(--shadow-md);
+}
+
+.footer__social-link:active {
+  transform: translate(1px, 1px) scale(1);
+  box-shadow: none;
 }
 
 /* Créditos */

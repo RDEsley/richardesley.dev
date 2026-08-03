@@ -1,10 +1,11 @@
 /**
  * main.css - Orquestrador de estilos
  * Importa todos os módulos CSS do portfólio
+ * Fontes (DM Sans + Bricolage Grotesque) são carregadas via <link> no <head>, não aqui,
+ * para não bloquear o render.
  */
 
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap");
-
+@import "tokens.css";
 @import "base.css";
 @import "theme.css";
 @import "components/navbar.css";
@@ -12,4 +13,7 @@
 @import "components/card.css";
 @import "components/button.css";
 @import "components/footer.css";
+@import "components/raio.css";
+@import "components/notice.css";
 @import "sections.css";
+@import "motion.css";
