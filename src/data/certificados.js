@@ -6,6 +6,18 @@
 const CERTIFICADOS = [
   // Certificados Prioritários
   {
+    nome: "Introdução a Ciência de Dados",
+    instituicao: "Cisco Networking Academy",
+    ano: 2026,
+    url: "src/pdfs/Richard Esley Silva Oliveira - Certificado de Introdução a Ciência de Dados.pdf",
+  },
+  {
+    nome: "Fundamentos de Análise de Dados",
+    instituicao: "Cisco Networking Academy",
+    ano: 2026,
+    url: "src/pdfs/Richard Esley Silva Oliveira - Curso Fundamentos de Análise de Dados.pdf",
+  },
+  {
     nome: "Python: Avançando na Linguagem",
     instituicao: "Alura",
     ano: 2024,
