@@ -45,6 +45,7 @@ const PROJETOS = [
     imagem: "assets/images/banner-fate-light.jpg",
     logo: "assets/images/fate-light.png",
     tech: ["Next.js 16", "React 19", "TypeScript", "Supabase", "PostgreSQL", "Playwright"],
+    site: "https://fatelight-alpha.vercel.app/",
     repo: "https://github.com/RDEsley/Fate-Light",
   },
   {
