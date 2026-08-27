@@ -398,7 +398,5 @@ FodyWeavers.xsd
 *.sln.iml
 .vercel
 
-# Claude
-.CLAUDE.md
-.claude
-claude
+# Agents
+AGENTS.md
