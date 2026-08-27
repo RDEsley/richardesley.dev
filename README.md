@@ -20,7 +20,7 @@
 
 Portfólio profissional criado para expor minha trajetória, projetos e habilidades como Desenvolvedor Full Stack com atenção especial à experiência do usuário (UX/UI), performance e acessibilidade. O site oferece versões em Português e Inglês, alternância de tema e formulário de contato funcional.
 
-🌍 **Live:** https://richardesley-dev.vercel.app/
+🌍 **Live:** https://richardesley.dev/
 
 ---
 
@@ -103,7 +103,7 @@ Este projeto está sob a licença **MIT**.
 
 *Desenvolvedor Full Stack & UX/UI*
 
-[![Portfólio](https://img.shields.io/badge/Website-25D366?style=for-the-badge&logo=vercel&logoColor=white)](https://richardesley-dev.vercel.app/)
+[![Portfólio](https://img.shields.io/badge/Website-25D366?style=for-the-badge&logo=hostinger&logoColor=white)](https://richardesley.dev/)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/RDEsley)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/richardesley/)
 
