@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://richardesley.dev/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://richardesley.dev/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://richardesley.dev/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://richardesley.dev/" />
+    <lastmod>2026-08-26</lastmod>
+  </url>
+  <url>
+    <loc>https://richardesley.dev/en/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://richardesley.dev/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://richardesley.dev/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://richardesley.dev/" />
+    <lastmod>2026-08-26</lastmod>
+  </url>
+  <url>
+    <loc>https://richardesley.dev/sobre.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://richardesley.dev/sobre.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://richardesley.dev/en/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://richardesley.dev/sobre.html" />
+    <lastmod>2026-08-26</lastmod>
+  </url>
+  <url>
+    <loc>https://richardesley.dev/en/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://richardesley.dev/sobre.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://richardesley.dev/en/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://richardesley.dev/sobre.html" />
+    <lastmod>2026-08-26</lastmod>
+  </url>
+</urlset>
