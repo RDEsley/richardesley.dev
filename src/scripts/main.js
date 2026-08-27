@@ -152,8 +152,13 @@ function renderizarProjetos() {
   const basePath = window.location.pathname.includes("/en/") ? "../" : "";
   grid.innerHTML = PROJETOS.map((p) => {
     const imgSrc = p.imagem ? (p.imagem.startsWith("http") ? p.imagem : basePath + p.imagem) : null;
+    const logoSrc = p.logo ? (p.logo.startsWith("http") ? p.logo : basePath + p.logo) : null;
+    const logoClass = p.logoEstilo ? ` card__project-logo--${p.logoEstilo.split(" ").join(" card__project-logo--")}` : "";
     const img = imgSrc
-      ? `<img src="${imgSrc}" alt="${p.titulo}" class="card__image" loading="lazy" decoding="async" />`
+      ? `<div class="card__media">
+          <img src="${imgSrc}" alt="" class="card__image" loading="lazy" decoding="async" />
+          ${logoSrc ? `<img src="${logoSrc}" alt="" class="card__project-logo${logoClass}" loading="lazy" decoding="async" />` : ""}
+        </div>`
       : `<div class="card__image card__image--placeholder">${ICONE_RAIO}<span class="card__image-letter">${(p.titulo.trim().charAt(0) || lblProjeto.charAt(0)).toUpperCase()}</span></div>`;
 
     const tags = (p.tech || [])
@@ -171,7 +176,8 @@ function renderizarProjetos() {
     if (p.site) links.push(`<a href="${p.site}" target="_blank" rel="noopener noreferrer" class="card__link">${lblSite}</a>`);
 
     const statusTexto = t(p.status, isEn);
-    const statusText = statusTexto ? (p.statusDate ? `${statusTexto} (${formatarDataHoje()})` : statusTexto) : "";
+    const statusDate = typeof p.statusDate === "string" ? p.statusDate : p.statusDate ? formatarDataHoje() : "";
+    const statusText = statusTexto ? (statusDate ? `${statusTexto} (${statusDate})` : statusTexto) : "";
     const statusBadge = statusText ? `<span class="card__status">${statusText}</span>` : "";
 
     const classeCard = "card card--project reveal" + (p.destaque ? " card--destaque" : "");
