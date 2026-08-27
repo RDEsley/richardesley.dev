@@ -64,10 +64,10 @@ Portfólio profissional criado para expor minha trajetória, projetos e habilida
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/RDEsley/portfolio-fullstack.git
+git clone https://github.com/RDEsley/richardesley.dev.git
 
 # 2. Acesse a pasta
-cd portfolio-fullstack
+cd richardesley.dev
 
 ```
 
