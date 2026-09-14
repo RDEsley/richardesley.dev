@@ -83,6 +83,29 @@
   border-top: 9px solid var(--bg-card);
 }
 
+/* Cursor do efeito typewriter */
+.hero__type-cursor {
+  display: inline-block;
+  width: 0.55ch;
+  height: 1.1em;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  background: var(--accent);
+  border-radius: 1px;
+  animation: type-blink 0.8s steps(1) infinite;
+}
+
+@keyframes type-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
 .hero__title {
   font-size: clamp(2rem, 5vw, 3.5rem);
   line-height: 1.1;
@@ -149,21 +172,6 @@
 .hero__image-wrapper {
   order: 0;
   position: relative;
-}
-
-/* Doodle de raio espiando atrás da foto */
-.hero__image-wrapper::before {
-  content: "";
-  position: absolute;
-  width: 64px;
-  height: 64px;
-  right: -16px;
-  bottom: -16px;
-  background: var(--spark);
-  border: var(--ink-width) solid var(--ink);
-  clip-path: polygon(58% 0%, 20% 55%, 48% 55%, 38% 100%, 82% 42%, 52% 42%);
-  transform: rotate(-8deg);
-  z-index: -1;
 }
 
 .hero__image {

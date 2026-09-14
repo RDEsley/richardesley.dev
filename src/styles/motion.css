@@ -10,7 +10,8 @@
 }
 
 [data-dance]:hover .dance__c,
-[data-dance]:focus-within .dance__c {
+[data-dance]:focus-within .dance__c,
+[data-dance].is-dancing .dance__c {
   animation: dance-hop 0.6s var(--ease-pop);
   animation-delay: calc(var(--i, 0) * 42ms);
 }
@@ -83,6 +84,11 @@ html:not(.reveal-ready) .section-heading::after {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .hero__type-cursor {
+    animation: none !important;
+    opacity: 1;
   }
 
   *,
