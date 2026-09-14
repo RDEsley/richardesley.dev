@@ -29,10 +29,10 @@ const PROJETOS = [
       en: "Core workouts turned into an adventure with XP, achievements, rankings, a customizable hero and automatic exploration.",
     },
     imagem: "assets/images/banner-evolyn.jpg",
-    logo: "assets/images/evolyn-logo.webp",
+    logo: "assets/images/evolyn-logo.png",
     tech: ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Express", "Supabase"],
     site: "https://evolyn-core-quest.vercel.app",
-    repo: "https://github.com/RDEsley/Evolyn-Core-Quest",
+    repoPrivado: true,
   },
   {
     titulo: "Fate Light",

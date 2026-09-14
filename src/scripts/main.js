@@ -167,8 +167,9 @@ function renderizarProjetos() {
 
     const links = [];
     if (p.repoPrivado) {
+      const tituloEscapado = String(p.titulo).replace(/"/g, "&quot;");
       links.push(
-        `<button type="button" class="card__link card__link--privado" data-aviso="repo-privado" data-site="${p.site || ""}">${ICONE_CADEADO}${lblRepo}</button>`
+        `<button type="button" class="card__link card__link--privado" data-aviso="repo-privado" data-titulo="${tituloEscapado}" data-site="${p.site || ""}">${ICONE_CADEADO}${lblRepo}</button>`
       );
     } else if (p.repo) {
       links.push(`<a href="${p.repo}" target="_blank" rel="noopener noreferrer" class="card__link">${lblRepo}</a>`);
@@ -198,11 +199,12 @@ function renderizarProjetos() {
     const alvo = e.target instanceof Element ? e.target.closest("[data-aviso='repo-privado']") : null;
     if (!alvo) return;
     const site = alvo.dataset.site;
+    const nome = alvo.dataset.titulo || (isEn ? "This project" : "Este projeto");
     abrirAviso({
       titulo: isEn ? "Private repository" : "Repositório privado",
       texto: isEn
-        ? "GMC is under active development under contract and its source code remains private. I'm glad to walk through the architecture, technical decisions and code samples in a conversation or interview."
-        : "O GMC (Granja Mult Core) está em desenvolvimento sob contrato e o código-fonte permanece privado. Posso apresentar a arquitetura, as decisões técnicas e trechos do código em uma conversa ou entrevista.",
+        ? `${nome} has a private source repository. I'm glad to walk through the architecture, technical decisions and code samples in a conversation or interview.`
+        : `O código-fonte de ${nome} permanece privado. Posso apresentar a arquitetura, as decisões técnicas e trechos do código em uma conversa ou entrevista.`,
       cta: site ? { label: isEn ? "See it live" : "Ver sistema no ar", href: site } : null,
       fecharLabel: isEn ? "Close" : "Fechar",
     });
