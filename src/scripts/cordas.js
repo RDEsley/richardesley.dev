@@ -228,29 +228,30 @@
     fonte.start();
   }
 
-  const botaoSom = document.querySelector("[data-sound-toggle]");
+  // Há mais de um botão (faixa abaixo das cordas no desktop, ao lado da foto no mobile)
+  const botoesSom = document.querySelectorAll("[data-sound-toggle]");
   const AudioCtx = window.AudioContext || window.webkitAudioContext;
-  if (botaoSom) {
+  botoesSom.forEach((botaoSom) => {
     if (!AudioCtx) {
       botaoSom.hidden = true;
-    } else {
-      botaoSom.addEventListener("click", () => {
-        if (!audio) {
-          audio = new AudioCtx();
-          buffers = NOTAS.map(sintetizar);
-        }
-        if (audio.state === "suspended") audio.resume();
-        somLigado = !somLigado;
-        botaoSom.setAttribute("aria-pressed", String(somLigado));
-        if (somLigado) {
-          // Arpejo curto confirmando que o som está ativo
-          [4, 3, 2, 1, 0].forEach((i, n) =>
-            setTimeout(() => cordas[i] && beliscar(cordas[i], Math.round(SEG * (0.3 + n * 0.1)), 10), n * 90)
-          );
-        }
-      });
+      return;
     }
-  }
+    botaoSom.addEventListener("click", () => {
+      if (!audio) {
+        audio = new AudioCtx();
+        buffers = NOTAS.map(sintetizar);
+      }
+      if (audio.state === "suspended") audio.resume();
+      somLigado = !somLigado;
+      botoesSom.forEach((b) => b.setAttribute("aria-pressed", String(somLigado)));
+      if (somLigado) {
+        // Arpejo curto confirmando que o som está ativo
+        [4, 3, 2, 1, 0].forEach((i, n) =>
+          setTimeout(() => cordas[i] && beliscar(cordas[i], Math.round(SEG * (0.3 + n * 0.1)), 10), n * 90)
+        );
+      }
+    });
+  });
 
   /* ---------- Inicialização ---------- */
   function iniciar() {

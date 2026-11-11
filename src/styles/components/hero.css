@@ -278,17 +278,97 @@
   }
 }
 
+/* Botão ao lado da foto: só no mobile */
+.sound-toggle--side {
+  display: none;
+}
+
+/* Desktop: botão da faixa mais chamativo, com anel pulsante até ser ligado */
+@media (min-width: 861px) {
+  .hero__play .sound-toggle {
+    position: relative;
+    padding-inline: 1.4rem;
+    min-height: 50px;
+    font-size: var(--fs-sm);
+    border-color: var(--rosin);
+    color: var(--rosin);
+  }
+
+  .hero__play .sound-toggle:hover {
+    background: var(--rosin);
+    color: var(--paper-light);
+  }
+
+  .hero__play .sound-toggle[aria-pressed="false"]::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border: 1.5px solid var(--rosin);
+    pointer-events: none;
+    animation: pulso-borda 1.8s ease-out infinite;
+  }
+
+  .hero__play .sound-toggle[aria-pressed="true"] {
+    background: var(--rosin);
+    color: var(--paper-light);
+  }
+}
+
+@keyframes pulso-borda {
+  0% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.18, 1.5);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__play .sound-toggle::after {
+    animation: none !important;
+    display: none;
+  }
+}
+
 /* ---------- Responsivo ---------- */
 @media (max-width: 860px) {
   .hero__layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: auto 1fr;
     align-items: start;
+    column-gap: 1.25rem;
   }
 
   .hero__portrait {
-    order: -1;
+    grid-column: 1;
+    grid-row: 1;
     justify-self: start;
+    width: 180px;
     max-width: 180px;
+  }
+
+  .sound-toggle--side {
+    display: inline-flex;
+    grid-column: 2;
+    grid-row: 1;
+    align-self: end;
+    justify-self: start;
+    margin-bottom: 0.25rem;
+  }
+
+  .hero__intro {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .hero__play .sound-toggle {
+    display: none;
+  }
+
+  .hero__play {
+    border-top: 0;
+    padding-top: 0.25rem;
   }
 
   .hero__portrait::before {
@@ -299,14 +379,6 @@
     display: none;
   }
 
-  .hero__play {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .sound-toggle {
-    justify-content: center;
-  }
 }
 
 @media (max-width: 520px) {
