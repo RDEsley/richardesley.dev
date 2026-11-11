@@ -98,6 +98,8 @@
 }
 
 .hero__line--italic {
+  /* folga à direita: o "a" itálico invade a caixa e era cortado pelo overflow */
+  padding-right: 0.2em;
   padding-left: 0.9em;
   font-style: italic;
   font-weight: 400;
