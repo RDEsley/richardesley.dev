@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Minha História | Richard Oliveira</title>
-  <meta name="description" content="A trajetória de Richard Oliveira: da curiosidade por tecnologia ao Desenvolvedor Full Stack. Violino, CEUB, ETB, plataforma web para controle de pragas.">
+  <meta name="description" content="A trajetória de Richard Oliveira: da curiosidade por tecnologia ao desenvolvimento Full Stack. Violino, CEUB, ETB e projetos reais.">
+  <meta name="theme-color" content="#f2ead9">
   <meta property="og:title" content="Minha História | Richard Oliveira">
   <meta property="og:description" content="Conheça a trajetória de Richard Oliveira até o desenvolvimento Full Stack e a liderança técnica.">
   <meta property="og:type" content="profile">
@@ -20,98 +21,130 @@
   <link rel="alternate" hreflang="pt-br" href="https://richardesley.dev/sobre.html">
   <link rel="alternate" hreflang="en" href="https://richardesley.dev/en/about.html">
   <link rel="alternate" hreflang="x-default" href="https://richardesley.dev/sobre.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="src/styles/main.css">
-  <link rel="icon" type="image/png" sizes="16x16" href="src/images/favicon-16x16.png">
+  <script>
+    (function () {
+      var d = document.documentElement;
+      if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        d.classList.add("motion-ready");
+        setTimeout(function () { if (!window.__motionOK) d.classList.remove("motion-ready"); }, 3000);
+      }
+    })();
+  </script>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="navbar__inner">
-      <a href="index.html" class="navbar__brand" data-dance>Richard Oliveira</a>
-      <button class="navbar__hamburger" aria-label="Abrir menu" type="button">
-        <span></span><span></span><span></span>
-      </button>
-      <div class="navbar__nav">
-        <ul class="navbar__links">
-          <li><a href="index.html#home" class="navbar__link">Home</a></li>
-          <li><a href="index.html#sobre" class="navbar__link">Sobre</a></li>
-          <li><a href="index.html#projetos" class="navbar__link">Projetos</a></li>
-          <li><a href="index.html#certificados" class="navbar__link">Certificados</a></li>
-          <li><a href="index.html#contato" class="navbar__link">Contato</a></li>
-        </ul>
-        <div class="navbar__actions">
-          <button id="theme-toggle" class="navbar__theme-btn" aria-label="Alternar tema" type="button">&#9728;</button>
-          <a href="en/about.html" class="navbar__lang" hreflang="en">EN</a>
-        </div>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="nav">
+    <div class="nav__inner container">
+      <a href="index.html" class="nav__brand" aria-label="Richard Oliveira — voltar ao portfólio">
+        <span class="nav__mono" aria-hidden="true">R<i>o</i></span>
+        <span class="nav__domain">richardesley.dev</span>
+      </a>
+
+      <nav id="menu" class="nav__menu" aria-label="Principal">
+        <ol class="nav__links">
+          <li><a href="index.html#sobre" class="nav__link"><span class="nav__num" aria-hidden="true">I</span>Sobre</a></li>
+          <li><a href="index.html#projetos" class="nav__link"><span class="nav__num" aria-hidden="true">II</span>Projetos</a></li>
+          <li><a href="index.html#certificados" class="nav__link"><span class="nav__num" aria-hidden="true">III</span>Certificados</a></li>
+          <li><a href="index.html#contato" class="nav__link"><span class="nav__num" aria-hidden="true">IV</span>Contato</a></li>
+        </ol>
+      </nav>
+
+      <div class="nav__actions">
+        <a href="en/about.html" class="nav__lang" hreflang="en" lang="en" aria-label="English version">EN</a>
+        <button type="button" class="nav__toggle" data-menu-toggle aria-expanded="false" aria-controls="menu">Menu</button>
       </div>
     </div>
-  </nav>
+    <div class="nav__bow" aria-hidden="true"></div>
+  </header>
 
-  <main class="story-page">
+  <main id="conteudo" class="story">
     <div class="container">
-      <a href="index.html#sobre" class="story-page__back" data-dance>← Voltar ao portfólio</a>
-      <header class="story-page__header">
-        <h1 data-dance>Minha História</h1>
-        <p class="story-page__intro">Da curiosidade por tecnologia ao Desenvolvedor Full Stack — uma trajetória guiada pela dedicação e pela motivação.</p>
+      <a href="index.html#sobre" class="story__back ink-link">← Voltar ao portfólio</a>
+
+      <header class="story__header">
+        <p class="story__kicker mono">Prelúdio estendido</p>
+        <h1 class="story__title">Minha <em>história</em></h1>
+        <p class="story__intro">Da curiosidade por tecnologia ao desenvolvimento Full Stack — uma trajetória guiada pela dedicação e pela motivação.</p>
       </header>
 
-      <article class="story-page__content">
-        <p>Desde cedo, a tecnologia esteve presente na minha vida. Passei boa parte da infância explorando jogos online e ambientes digitais. Claro, também tive as experiências típicas de qualquer criança — brincar na rua, jogar bola, carrinhos — mas sempre existia uma curiosidade constante sobre as telas e os dispositivos ao meu redor.</p>
+      <div class="story__layout">
+        <article class="story__content">
+          <p>Desde cedo, a tecnologia esteve presente na minha vida. Passei boa parte da infância explorando jogos online e ambientes digitais. Claro, também tive as experiências típicas de qualquer criança — brincar na rua, jogar bola, carrinhos — mas sempre existia uma curiosidade constante sobre as telas e os dispositivos ao meu redor.</p>
 
-        <p>Com o tempo, essa curiosidade começou a se transformar em perguntas: como um toque na tela gera uma resposta? Como um celular executa tantas tarefas diferentes? O que acontece por trás de um aplicativo ou de um site? Essa vontade de entender como tudo funcionava foi o que me aproximou da tecnologia de forma mais profunda.</p>
+          <p>Com o tempo, essa curiosidade começou a se transformar em perguntas: como um toque na tela gera uma resposta? Como um celular executa tantas tarefas diferentes? O que acontece por trás de um aplicativo ou de um site? Essa vontade de entender como tudo funcionava foi o que me aproximou da tecnologia de forma mais profunda.</p>
 
-        <p>Sempre tive facilidade em me dedicar intensamente às coisas que despertavam meu interesse. Aos 12 anos comecei a estudar violino, instrumento no qual me formei e atuei profissionalmente. Ao longo do tempo também aprendi viola de arco, teclado, gaita, ukulele e flauta transversal, desenvolvendo um grande interesse pela música.</p>
+          <p>Sempre tive facilidade em me dedicar intensamente às coisas que despertavam meu interesse. Aos 12 anos comecei a estudar violino, instrumento no qual me formei e atuei profissionalmente. Ao longo do tempo também aprendi viola de arco, teclado, gaita, ukulele e flauta transversal, desenvolvendo um grande interesse pela música.</p>
 
-        <p>Aos 16 anos concluí o curso de inglês no CILB. No ano seguinte, ingressei no Bacharelado em Ciência da Computação pelo CEUB e iniciei, em paralelo, o curso Técnico em Informática na Escola Técnica de Brazlândia. Concluí o curso técnico em julho de 2023, uma etapa extremamente importante na minha formação.</p>
+          <p>Aos 16 anos concluí o curso de inglês no CILB. No ano seguinte, ingressei no Bacharelado em Ciência da Computação pelo CEUB e iniciei, em paralelo, o curso Técnico em Informática na Escola Técnica de Brazlândia. Concluí o curso técnico em julho de 2023, uma etapa extremamente importante na minha formação.</p>
 
-        <p>Durante o curso técnico tive a oportunidade de participar do desenvolvimento de um projeto completo: uma plataforma web voltada para o setor de controle de pragas. O sistema tinha como objetivo tanto divulgar serviços de dedetização quanto orientar usuários com informações educativas sobre prevenção de pragas domésticas.</p>
+          <p>Durante o curso técnico tive a oportunidade de participar do desenvolvimento de um projeto completo: uma plataforma web voltada para o setor de controle de pragas. O sistema tinha como objetivo tanto divulgar serviços de dedetização quanto orientar usuários com informações educativas sobre prevenção de pragas domésticas.</p>
 
-        <p>A plataforma incluía autenticação de usuários, sistema de cadastro e login, gerenciamento de contas, além de um painel administrativo com funcionalidades de CRUD para administração dos dados. Também desenvolvemos uma interface responsiva para garantir boa experiência de uso em diferentes dispositivos.</p>
+          <blockquote class="story__pull">“Minha trajetória sempre foi guiada pela curiosidade em entender como a tecnologia funciona.”</blockquote>
 
-        <p>Nesse projeto tive um papel ativo na organização das tarefas da equipe, planejamento das etapas de desenvolvimento e suporte técnico aos colegas durante a construção do sistema. A experiência foi extremamente enriquecedora, pois envolveu desde a concepção da ideia até a implementação das funcionalidades principais da plataforma.</p>
+          <p>A plataforma incluía autenticação de usuários, sistema de cadastro e login, gerenciamento de contas, além de um painel administrativo com funcionalidades de CRUD para administração dos dados. Também desenvolvemos uma interface responsiva para garantir boa experiência de uso em diferentes dispositivos.</p>
 
-        <p>Além do aprendizado técnico em HTML, CSS, JavaScript, Python e PHP, o projeto também trouxe experiência prática com organização de equipe, resolução de problemas e desenvolvimento de sistemas reais.</p>
+          <p>Nesse projeto tive um papel ativo na organização das tarefas da equipe, planejamento das etapas de desenvolvimento e suporte técnico aos colegas durante a construção do sistema. A experiência foi extremamente enriquecedora, pois envolveu desde a concepção da ideia até a implementação das funcionalidades principais da plataforma.</p>
 
-        <p>Atualmente sigo minha formação no Bacharelado em Ciência da Computação no UniCEUB, fortalecendo minha base em desenvolvimento de software e arquitetura de sistemas. Paralelamente, tive experiência profissional como assistente administrativo, onde trabalhei com organização de processos, relatórios e gestão de informações — habilidades que hoje contribuem para uma visão mais estruturada no desenvolvimento de projetos.</p>
+          <p>Além do aprendizado técnico em HTML, CSS, JavaScript, Python e PHP, o projeto também trouxe experiência prática com organização de equipe, resolução de problemas e desenvolvimento de sistemas reais.</p>
 
-        <p>Durante essa trajetória desenvolvi diversos projetos práticos que estão publicados no meu GitHub (<a href="https://github.com/RDEsley" target="_blank" rel="noopener">github.com/RDEsley</a>), somando <strong>mais de 40 repositórios</strong> envolvendo diferentes tecnologias. Entre eles estão aplicações utilizando React, Python, MongoDB, PHP e SQL.</p>
+          <p>Atualmente sigo minha formação no Bacharelado em Ciência da Computação no UniCEUB, fortalecendo minha base em desenvolvimento de software e arquitetura de sistemas. Paralelamente, tive experiência profissional como assistente administrativo, onde trabalhei com organização de processos, relatórios e gestão de informações — habilidades que hoje contribuem para uma visão mais estruturada no desenvolvimento de projetos.</p>
 
-        <p>Também desenvolvi este site para organizar e apresentar minhas certificações, formações e projetos ao longo da jornada: <a href="https://richardesley.dev/">richardesley.dev</a>.</p>
+          <p>Durante essa trajetória desenvolvi diversos projetos práticos que estão publicados no meu GitHub (<a href="https://github.com/RDEsley" target="_blank" rel="noopener">github.com/RDEsley</a>), somando <strong>mais de 40 repositórios</strong> envolvendo diferentes tecnologias. Entre eles estão aplicações utilizando React, Python, MongoDB, PHP e SQL.</p>
 
-        <p>Hoje atuo como desenvolvedor Full Stack e UI/UX Focus, sempre buscando evoluir tecnicamente e construir soluções cada vez mais completas. Minha trajetória sempre foi guiada pela curiosidade em entender como a tecnologia funciona e pela motivação de transformar ideias em sistemas funcionais.</p>
+          <p>Também desenvolvi este site para organizar e apresentar minhas certificações, formações e projetos ao longo da jornada: <a href="https://richardesley.dev/">richardesley.dev</a>.</p>
 
-        <p>Continuo aprendendo, desenvolvendo novos projetos e aprimorando minhas habilidades, com o objetivo de contribuir cada vez mais em projetos desafiadores e em ambientes que valorizem crescimento e inovação.</p>
+          <p>Hoje atuo como desenvolvedor Full Stack e UI/UX Focus, sempre buscando evoluir tecnicamente e construir soluções cada vez mais completas. Minha trajetória sempre foi guiada pela curiosidade em entender como a tecnologia funciona e pela motivação de transformar ideias em sistemas funcionais.</p>
 
-        <div class="story-page__contact">
-          <p><strong>Contato:</strong> <a href="mailto:richardesleyso@gmail.com">richardesleyso@gmail.com</a> · (61) 99881-8808 · <a href="https://linkedin.com/in/richardesley" target="_blank" rel="noopener">LinkedIn</a></p>
-        </div>
-      </article>
+          <p>Continuo aprendendo, desenvolvendo novos projetos e aprimorando minhas habilidades, com o objetivo de contribuir cada vez mais em projetos desafiadores e em ambientes que valorizem crescimento e inovação.</p>
+        </article>
+
+        <aside class="story__aside" aria-label="Ficha resumida">
+          <img src="assets/images/richard-profissional.jpeg" alt="Foto profissional de Richard Oliveira" width="1202" height="1600" loading="lazy" decoding="async">
+          <dl>
+            <div><dt class="mono">Formação</dt><dd>Ciência da Computação — CEUB</dd></div>
+            <div><dt class="mono">Técnico</dt><dd>Informática — ETB (2023)</dd></div>
+            <div><dt class="mono">E-mail</dt><dd><a href="mailto:richardesleyso@gmail.com">richardesleyso@gmail.com</a></dd></div>
+            <div><dt class="mono">Telefone</dt><dd><a href="tel:+5561998818808">(61) 99881-8808</a></dd></div>
+            <div><dt class="mono">LinkedIn</dt><dd><a href="https://linkedin.com/in/richardesley" target="_blank" rel="noopener noreferrer">/in/richardesley ↗</a></dd></div>
+          </dl>
+          <a href="src/files/cv.pdf" class="btn btn--primary" download>Baixar CV <span class="btn__arrow btn__arrow--down" aria-hidden="true">↓</span></a>
+        </aside>
+      </div>
     </div>
   </main>
 
   <footer class="footer">
-    <div class="footer__inner">
-      <a href="index.html" class="footer__link">← Voltar ao portfólio</a>
-      <p class="footer__credits">Feito por <strong data-dance>Richard Oliveira</strong> · <span id="current-year">2025</span></p>
+    <div class="container">
+      <div class="footer__top">
+        <p class="footer__fine" aria-label="Fine — fim">Fine<span>.</span><i class="footer__final-bar" aria-hidden="true"></i></p>
+        <div class="footer__nav">
+          <ul class="footer__links">
+            <li><a href="index.html">← Voltar ao portfólio</a></li>
+          </ul>
+          <ul class="footer__social">
+            <li><a href="https://linkedin.com/in/richardesley" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
+            <li><a href="https://github.com/RDEsley" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a></li>
+            <li><a href="https://x.com/richardesleyRE" target="_blank" rel="noopener noreferrer" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></li>
+            <li><a href="https://instagram.com/richardesley" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61586258777101" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom mono">
+        <span>© <span data-year>2026</span> Richard Oliveira — todos os direitos reservados</span>
+        <span>Composto à mão em HTML, CSS e JavaScript</span>
+      </div>
     </div>
   </footer>
 
-  <script src="src/scripts/theme.js"></script>
-  <script src="src/scripts/raio.js"></script>
+  <script src="src/scripts/main.js"></script>
   <script src="src/scripts/animacoes.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      carregarTema();
-      document.getElementById("theme-toggle")?.addEventListener("click", alternarTema);
-      document.getElementById("current-year").textContent = new Date().getFullYear();
-      const h = document.querySelector(".navbar__hamburger");
-      const n = document.querySelector(".navbar__nav");
-      if (h && n) {
-        h.addEventListener("click", () => { h.classList.toggle("is-active"); n.classList.toggle("is-open"); });
-      }
-    });
-  </script>
 </body>
 </html>
