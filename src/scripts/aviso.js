@@ -73,7 +73,7 @@ function abrirAviso({ titulo, texto, cta = null, fecharLabel = "Fechar" }) {
 
   const closeBtn = document.createElement("button");
   closeBtn.type = "button";
-  closeBtn.className = "btn btn--ghost";
+  closeBtn.className = "btn";
   closeBtn.textContent = fecharLabel;
   closeBtn.addEventListener("click", () => dialog.close());
   actions.appendChild(closeBtn);

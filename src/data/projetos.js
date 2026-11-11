@@ -2,40 +2,29 @@
  * projetos.js - Dados dos projetos para exibição no portfólio
  * Cada projeto possui título, descrição, imagem, tech stack e links
  * status/descricao aceitam string (mesmo texto nos dois idiomas) ou { pt, en }
+ * estado: "dev" | "live" | "done" — define a cor do status no repertório
  * statusDate aceita uma data YYYY.MM.DD ou true para usar a data atual
  */
 
 const PROJETOS = [
   {
     titulo: "GMC (Granja Mult Core)",
+    estado: "dev",
     status: { pt: "Em Desenvolvimento", en: "In Development" },
     statusDate: "2026.08.26",
     descricao: {
       pt: "Sistema completo para gestão de granjas, controle de insumos, produção e relatórios em Dashboard.",
       en: "Complete farm management system: supply control, production tracking, and dashboard reporting.",
     },
-    imagem: "assets/images/granja-mult-core.png",
+    imagem: "assets/images/banner-gmc.jpg",
     tech: ["React", "TypeScript", "Supabase", "Dashboard"],
     site: "https://gmc-granja-mult-core.vercel.app/",
     repoPrivado: true, // código sob contrato — botão abre aviso de projeto privado
     destaque: true,
   },
   {
-    titulo: "Evolyn · Core Quest",
-    status: { pt: "Em funcionamento", en: "Live" },
-    statusDate: false,
-    descricao: {
-      pt: "Treinos de core transformados em aventura, com XP, conquistas, rankings, herói personalizável e exploração automática.",
-      en: "Core workouts turned into an adventure with XP, achievements, rankings, a customizable hero and automatic exploration.",
-    },
-    imagem: "assets/images/banner-evolyn.jpg",
-    logo: "assets/images/evolyn-logo.png",
-    tech: ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Express", "Supabase"],
-    site: "https://evolyn-core-quest.vercel.app",
-    repoPrivado: true,
-  },
-  {
     titulo: "Fate Light",
+    estado: "dev",
     status: { pt: "Em Desenvolvimento", en: "In Development" },
     statusDate: "2026.08.26",
     descricao: {
@@ -49,7 +38,23 @@ const PROJETOS = [
     repo: "https://github.com/RDEsley/Fate-Light",
   },
   {
+    titulo: "Evolyn · Core Quest",
+    estado: "live",
+    status: { pt: "Em funcionamento", en: "Live" },
+    statusDate: false,
+    descricao: {
+      pt: "Treinos de core transformados em aventura, com XP, conquistas, rankings, herói personalizável e exploração automática.",
+      en: "Core workouts turned into an adventure with XP, achievements, rankings, a customizable hero and automatic exploration.",
+    },
+    imagem: "assets/images/banner-evolyn.jpg",
+    logo: "assets/images/evolyn-logo.png",
+    tech: ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Express", "Supabase"],
+    site: "https://evolyn-core-quest.vercel.app",
+    repoPrivado: true,
+  },
+  {
     titulo: "Insta Analytics",
+    estado: "done",
     status: { pt: "Finalizado — Protótipo", en: "Completed — Prototype" },
     statusDate: false,
     descricao: {
@@ -65,6 +70,7 @@ const PROJETOS = [
   },
   {
     titulo: "SASens - Sistema de Análise de Sentimentos",
+    estado: "dev",
     status: { pt: "Em Desenvolvimento", en: "In Development" },
     statusDate: "2026.08.26",
     descricao: {
@@ -79,6 +85,7 @@ const PROJETOS = [
   },
   {
     titulo: "Casas de Oração — Brasília e Águas Lindas",
+    estado: "live",
     status: { pt: "Em funcionamento", en: "Live" },
     statusDate: false,
     descricao: {
@@ -94,6 +101,7 @@ const PROJETOS = [
   },
   {
     titulo: "WhatsApp - App Android",
+    estado: "done",
     status: { pt: "Finalizado", en: "Completed" },
     statusDate: false,
     descricao: {
@@ -108,6 +116,7 @@ const PROJETOS = [
   },
   {
     titulo: "Fate Eight Tech",
+    estado: "live",
     status: { pt: "Em funcionamento", en: "Live" },
     statusDate: false,
     descricao: {
