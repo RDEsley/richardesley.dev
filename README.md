@@ -73,6 +73,17 @@ python -m http.server 5173
 
 Depois acesse `http://localhost:5173/` e `http://localhost:5173/en/`.
 
+## Versionamento de CSS e JS
+
+O servidor cacheia CSS e JS por 7 dias. Para o navegador nunca misturar HTML novo com CSS
+antigo (o do Instagram é o mais teimoso), cada referência carrega `?v=<hash do conteúdo>`.
+Depois de editar qualquer arquivo em `src/styles/` ou `src/scripts/`, rode:
+
+```bash
+node scripts/versionar.mjs          # atualiza os ?v= nos HTML e no main.css
+node scripts/versionar.mjs --check  # só confere (útil antes de publicar)
+```
+
 ## Atualizando o conteúdo
 
 - **Novo projeto:** adicione um objeto em `src/data/projetos.js` (título, `estado`, status, descrição em `pt`/`en`, imagem, tecnologias e links).
