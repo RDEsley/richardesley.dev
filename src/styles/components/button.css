@@ -1,66 +1,113 @@
 /**
- * button.css - Componente Button reutilizável
- * Variantes: primary, secondary, ghost — contorno de tinta + sombra dura + "apertar" no clique
+ * button.css - Botões e links de ação
  */
 
 .btn {
+  --btn-bg: transparent;
+  --btn-fg: var(--ink);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-1);
-  padding: var(--space-2) var(--space-4);
-  font-size: 1rem;
-  font-weight: 600;
-  font-family: inherit;
-  border-radius: var(--radius-pill);
-  border: var(--ink-width) solid var(--ink);
-  box-shadow: var(--shadow-sm);
-  cursor: pointer;
-  transition: transform 0.15s var(--ease-pop), background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.15s var(--ease-pop);
+  gap: 0.6rem;
+  min-height: 48px;
+  padding: 0.75rem 1.35rem;
+  border: 1.5px solid var(--ink);
+  border-radius: 0;
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition: color var(--dur-base) var(--ease-out);
 }
 
-.btn:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: var(--shadow-md);
+/* Preenchimento como uma arcada: varre da esquerda para a direita */
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--ink);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--dur-base) var(--ease-bow);
 }
 
+.btn:hover::before,
+.btn:focus-visible::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.btn:hover,
 .btn:focus-visible {
-  outline: none;
-  box-shadow: var(--shadow-md), 0 0 0 3px rgba(13, 148, 136, 0.3);
+  color: var(--paper);
 }
 
-.btn:active {
-  transform: translate(1px, 1px);
-  box-shadow: none;
-}
-
-/* Variante primária */
 .btn--primary {
-  background: var(--accent);
-  color: white;
+  --btn-bg: var(--ink);
+  --btn-fg: var(--paper);
 }
 
-.btn--primary:hover {
-  background: var(--accent-hover);
+.btn--primary::before {
+  background: var(--rosin);
 }
 
-/* Variante secundária / outline */
-.btn--secondary {
-  background: transparent;
-  color: var(--accent);
+.btn__arrow {
+  display: inline-block;
+  transition: transform var(--dur-base) var(--ease-out);
 }
 
-.btn--secondary:hover {
-  background: var(--accent-light);
+.btn:hover .btn__arrow {
+  transform: translate(2px, -2px);
 }
 
-/* Variante ghost */
-.btn--ghost {
-  background: transparent;
-  color: var(--text-primary);
+.btn:hover .btn__arrow--down {
+  transform: translateY(3px);
 }
 
-.btn--ghost:hover {
-  background: var(--accent-light);
-  border-color: var(--accent);
+.btn:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+/* Link com sublinhado desenhado */
+.ink-link {
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 100% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size var(--dur-base) var(--ease-bow), color var(--dur-fast);
+  padding-bottom: 1px;
+}
+
+.ink-link:hover {
+  color: var(--rosin);
+  animation: ink-redraw 0.5s var(--ease-bow);
+}
+
+@keyframes ink-redraw {
+  0% {
+    background-size: 100% 1px;
+    background-position: 100% 100%;
+  }
+  45% {
+    background-size: 0 1px;
+    background-position: 100% 100%;
+  }
+  55% {
+    background-size: 0 1px;
+    background-position: 0 100%;
+  }
+  100% {
+    background-size: 100% 1px;
+    background-position: 0 100%;
+  }
 }

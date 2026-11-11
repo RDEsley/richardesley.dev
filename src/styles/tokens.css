@@ -1,22 +1,44 @@
 /**
- * tokens.css - Tokens de design "Comic Ink"
- * Raio, duração, easing e espessura de traço, usados por todos os componentes
+ * tokens.css - Tokens de design "Partitura"
+ * Papel de partitura, tinta, verniz de violino (rosin) e o azul do blazer.
+ * Paleta única — o site não possui modo escuro.
  */
 
 :root {
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
-  --radius-pill: 999px;
+  /* Cores */
+  --paper: #f2ead9;
+  --paper-deep: #e7dcc4;
+  --paper-light: #f8f3e8;
+  --ink: #17140f;
+  --ink-soft: #4b4337;
+  --ink-mute: #6f6555;
+  --rule: rgba(23, 20, 15, 0.16);
+  --rule-strong: rgba(23, 20, 15, 0.55);
+  --rosin: #a63c16;
+  --rosin-bright: #c9541f;
+  --indigo: #23408c;
 
-  --dur-fast: 0.15s;
-  --dur-base: 0.25s;
-  --dur-slow: 0.45s;
+  /* Tipografia */
+  --font-display: "Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+  --font-body: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", Consolas, monospace;
 
-  /* Overshoot: o "pulinho" que dá cara de cartoon a qualquer transição */
-  --ease-pop: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-lead: clamp(1.25rem, 1.05rem + 0.9vw, 1.75rem);
+  --fs-h3: clamp(1.6rem, 1.2rem + 1.6vw, 2.5rem);
+  --fs-h2: clamp(3rem, 2rem + 5vw, 6.5rem);
+
+  /* Layout */
+  --gutter: clamp(1rem, 0.6rem + 2vw, 2.5rem);
+  --max: 1280px;
+  --nav-h: 64px;
+
+  /* Movimento */
+  --dur-fast: 0.18s;
+  --dur-base: 0.35s;
+  --dur-slow: 0.8s;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-
-  --ink-width: 2px;
-  --pop-offset: 4px;
+  --ease-bow: cubic-bezier(0.65, 0, 0.35, 1);
 }

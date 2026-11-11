@@ -1,87 +1,112 @@
 /**
- * footer.css - Componente Footer
- * Links rápidos, redes sociais e créditos
+ * footer.css - "Fine": a marca de fim da partitura
  */
 
 .footer {
-  background: var(--bg-secondary);
-  border-top: var(--ink-width) solid var(--border-color);
-  padding: var(--space-6) var(--space-4);
-  margin-top: var(--space-8);
+  background: var(--ink);
+  color: var(--paper);
+  padding-block: clamp(3rem, 6vw, 5rem) 1.5rem;
+  overflow: hidden;
 }
 
-.footer__inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-4);
-  text-align: center;
-}
-
-/* Links rápidos */
-.footer__links {
+.footer__top {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--space-3);
-  list-style: none;
+  justify-content: space-between;
+  align-items: end;
+  gap: 2rem;
 }
 
-.footer__link {
-  color: var(--text-secondary);
-  font-weight: 500;
-  transition: color 0.2s ease;
+.footer__fine {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(5rem, 3rem + 12vw, 13rem);
+  line-height: 0.8;
+  letter-spacing: -0.03em;
 }
 
-.footer__link:hover {
-  color: var(--accent);
+.footer__fine span {
+  color: var(--rosin-bright);
 }
 
-/* Redes sociais */
+/* Barra dupla final, como no fim de uma partitura */
+.footer__final-bar {
+  display: inline-block;
+  width: 14px;
+  height: 0.62em;
+  margin-left: 0.15em;
+  border-left: 2px solid currentColor;
+  border-right: 7px solid currentColor;
+  vertical-align: baseline;
+  font-style: normal;
+}
+
+.footer__nav {
+  display: grid;
+  gap: 1.25rem;
+  justify-items: end;
+}
+
+.footer__links,
 .footer__social {
+  list-style: none;
   display: flex;
-  gap: var(--space-3);
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
 }
 
-.footer__social-link {
-  display: flex;
+.footer__links a {
+  font-size: var(--fs-sm);
+  text-decoration: none;
+  color: rgba(242, 234, 217, 0.8);
+  transition: color var(--dur-fast);
+}
+
+.footer__links a:hover {
+  color: var(--rosin-bright);
+}
+
+.footer__social a {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(242, 234, 217, 0.3);
   border-radius: 50%;
-  border: var(--ink-width) solid var(--border-color);
-  background: var(--accent-light);
-  color: var(--accent);
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.15s var(--ease-pop), background-color 0.2s ease, color 0.2s ease, box-shadow 0.15s var(--ease-pop);
+  color: var(--paper);
+  transition: background-color var(--dur-fast), color var(--dur-fast), transform var(--dur-base) var(--ease-out);
 }
 
-.footer__social-link svg {
-  flex-shrink: 0;
+.footer__social a:hover {
+  background: var(--paper);
+  color: var(--ink);
+  transform: translateY(-3px);
 }
 
-.footer__social-link:hover {
-  background: var(--accent);
-  color: white;
-  border-color: var(--ink);
-  transform: translate(-2px, -2px) scale(1.05);
-  box-shadow: var(--shadow-md);
+.footer__social svg {
+  width: 18px;
+  height: 18px;
 }
 
-.footer__social-link:active {
-  transform: translate(1px, 1px) scale(1);
-  box-shadow: none;
+.footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  margin-top: clamp(2rem, 5vw, 3.5rem);
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(242, 234, 217, 0.18);
+  color: rgba(242, 234, 217, 0.65);
 }
 
-/* Créditos */
-.footer__credits {
-  font-size: 0.95rem;
-  color: var(--text-muted);
+.footer__bottom a {
+  color: inherit;
 }
 
-.footer__credits strong {
-  color: var(--text-primary);
+@media (max-width: 720px) {
+  .footer__nav {
+    justify-items: start;
+  }
 }

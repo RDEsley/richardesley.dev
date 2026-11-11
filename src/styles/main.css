@@ -1,19 +1,16 @@
 /**
- * main.css - Orquestrador de estilos
- * Importa todos os módulos CSS do portfólio
- * Fontes (DM Sans + Bricolage Grotesque) são carregadas via <link> no <head>, não aqui,
- * para não bloquear o render.
+ * main.css - Orquestrador de estilos ("Partitura")
+ * Fontes (Bodoni Moda, Archivo, JetBrains Mono) são carregadas via <link> no <head>.
+ * Modo de cor único: não existe tema claro/escuro.
  */
 
 @import "tokens.css";
 @import "base.css";
-@import "theme.css";
+@import "components/button.css";
 @import "components/navbar.css";
 @import "components/hero.css";
-@import "components/card.css";
-@import "components/button.css";
-@import "components/footer.css";
-@import "components/raio.css";
 @import "components/notice.css";
+@import "components/footer.css";
 @import "sections.css";
+@import "story.css";
 @import "motion.css";
