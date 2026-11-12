@@ -21,7 +21,6 @@ const PROJETOS = [
     tech: ["React", "TypeScript", "Supabase", "Dashboard"],
     site: "https://gmc-granja-mult-core.vercel.app/",
     repoPrivado: true, // código sob contrato — botão abre aviso de projeto privado
-    destaque: true,
   },
   {
     titulo: "Fate Light",
