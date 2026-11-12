@@ -9,6 +9,8 @@ Options -Indexes
 
 <IfModule mod_expires.c>
   ExpiresActive On
+  # HTML sempre revalidado: ele aponta para os CSS/JS versionados (scripts/versionar.mjs).
+  ExpiresByType text/html "access plus 0 seconds"
   ExpiresByType text/css "access plus 7 days"
   ExpiresByType application/javascript "access plus 7 days"
   ExpiresByType image/jpeg "access plus 30 days"
