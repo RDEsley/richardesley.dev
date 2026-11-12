@@ -321,13 +321,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 1s var(--ease-out), filter var(--dur-slow);
-  filter: saturate(0.85);
-}
-
-.program__item:hover .program__media img {
-  transform: scale(1.05) rotate(-0.6deg);
-  filter: saturate(1.05);
 }
 
 /* Projeto em destaque: fita "Estreia" no canto */
